@@ -74,6 +74,8 @@ Muévase al directorio `prac21` mediante rutas absolutas. Mediante rutas relativ
 
 bash
 lucia.zamudio@polifemo:~$ cd /home/lucia.zamudio/prac2/prac21
+lucia.zamudio@polifemo:~/prac2/prac21$ cp ../f[12].txt ./tmp1/
+lucia.zamudio@polifemo:~/prac2/prac21$ mv tmp1/f1.txt ./tmp1/f21.txt
 
 
 ---
@@ -82,8 +84,7 @@ lucia.zamudio@polifemo:~$ cd /home/lucia.zamudio/prac2/prac21
 Mueva y renombre el fichero `f2.txt` del directorio `tmp1` al directorio `tmp2` con el nombre `f23.txt` usando rutas relativas y en un solo comando.
 
 bash
-# Escribe aquí la solución al ejercicio 6
-
+lucia.zamudio@polifemo:~/prac2/prac21$ mv tmp1/f2.txt ../prac23/tmp2/f23.txt
 
 ---
 
@@ -91,8 +92,8 @@ bash
 Muévase con un solo comando al directorio `tmp2` sin usar rutas absolutas. Busque con el comando `find` los directorios que cuelgan de su directorio personal cuyo segundo carácter sea una `r` o una `t` (tanto en mayúsculas como en minúsculas), su penúltimo carácter no sea un número y su último carácter sea un número.
 
 bash
-# Escribe aquí la solución al ejercicio 7
-
+lucia.zamudio@polifemo:~/prac2/prac21$  cd ../prac23/tmp2
+lucia.zamudio@polifemo:~/prac2/prac23/tmp2$ find /home/lucia.zamudio -type d-name "?[rRtT]*[!0-9][0-9]"
 
 ---
 

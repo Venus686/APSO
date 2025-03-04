@@ -198,7 +198,9 @@ lucia.zamudio@polifemo:~/prac2$ ln -s prac23/tmp2/ temporal
 Usando el comando file, averigüe de qué tipo son los ficheros solucionprac1 y temporal.
 
 ```bash
-
+lucia.zamudio@polifemo:~/prac2$ file solucionprac1.txt temporal
+solucionprac1.txt: ASCII text
+temporal:          symbolic link to prac23/tmp2/man 
 ```
 
 ---
@@ -207,7 +209,7 @@ Usando el comando file, averigüe de qué tipo son los ficheros solucionprac1 y 
 Usando el comando who, visualice sólo los nombres de todas las sesiones que hay actualmente abiertas en el sistema, y el número de sesiones abiertas. Se necesita una opción.
 
 ```bash
-
+lucia.zamudio@polifemo:~/prac2$ who -q
 ```
 
 ---
@@ -216,6 +218,13 @@ Usando el comando who, visualice sólo los nombres de todas las sesiones que hay
 Abra una nueva sesión. Edite con el editor joe un fichero con el nombre inservible. Averigüe con el comando ps el identificador del proceso joe. Mate al proceso joe con el comando kill.
 
 ```bash
+<Abro una nueva ventana>
+joe inservible
+<me voy a otra ventana y ejecuto:>
+ps -u velez
+<averiguo el pid del proceso joe que se ejecuta en la otra
+ventana>
+kill -9 <pid del proceso joe> ps
 
 ```
 
@@ -225,6 +234,12 @@ Abra una nueva sesión. Edite con el editor joe un fichero con el nombre inservi
 Escriba un mensaje con el comando write al usuario velez que tiene la sesión abierta a una hora más temprana.
 
 ```bash
+who <para averiguar las sesiones abiertas de velez>
+<averiguo cual es la sesión abierta en primer lugar por la
+fecha>
+write velez <tty correspondiente>
+<escribo el mensaje>
+^d 
 
 ```
 
@@ -234,5 +249,5 @@ Escriba un mensaje con el comando write al usuario velez que tiene la sesión ab
 Deje todos los permisos menos el de ejecución al fichero solp2.txt y quite el resto de los permisos para todos los que no son de su grupo sobre ese fichero.
 
 ```bash
-
+chmod a-x,o-rw solp2.txt 
 ```

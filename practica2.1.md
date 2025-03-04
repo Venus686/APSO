@@ -179,7 +179,8 @@ lucia.zamudio@polifemo:~/prac2$ wc -c prac23/tmp2/f23.txt
 Cree un enlace (hard link) llamado solucionprac1 en el directorio prac2 que se corresponda con el fichero solp1.txt del directorio prac1.
 
 ```bash
-
+lucia.zamudio@polifemo:~/prac2$ ln /home/lucia.zamudio/prac1/solp1.txt  solu
+cionprac1.txt
 ```
 
 ---
@@ -188,7 +189,7 @@ Cree un enlace (hard link) llamado solucionprac1 en el directorio prac2 que se c
 Cree un enlace simbólico (soft link) llamado temporal en el directorio prac2 que apunte al directorio tmp2 del directorio prac23.
 
 ```bash
-
+lucia.zamudio@polifemo:~/prac2$ ln -s prac23/tmp2/ temporal
 ```
 
 ---

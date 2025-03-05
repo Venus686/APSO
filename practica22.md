@@ -1,19 +1,19 @@
 ### Ejercicio 1
 Muestre por pantalla el texto "Practica 2: Manejo de Shell - Inicio..."
 ```bash
-
+lucia.zamudio@polifemo:~$ echo "Practica 2: Manejo de Shell - Inicio..."
 ```
 
 ### Ejercicio 2
 Muévase al directorio ~/ModuloI/Practica1/
 ```bash
-
+lucia.zamudio@polifemo:~$ cd ModuloI/Practica1/
 ```
 
 ### Ejercicio 3
 Cree un directorio, dentro de ModuloI, llamado Practica2. (Se deberá usar una ruta relativa).
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica1$ mkdir ../Practica2
 ```
 
 ### Ejercicio 4

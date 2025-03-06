@@ -8,11 +8,11 @@ Con los exits se va saliendo de cada uno de los tipos de shell
 
 ### BASH
 OPCIONES DE BASH
-ls -d ?? -> muestra los nombres de los directorios cuyo nombre tenga 2 caracteres, no muestra su contenido
+ls -d ?? -> muestra los nombres de los directorios cuyo nombre tenga 2 caracteres, no muestra su contenido \
 set -o -> que opciones estan encendidos del bash y que comportamientos estan desactivos
-history on -> recuperar ordenes amtiguas(con la fecha)
-noglob-> no utilices expresiones globales (?, [], *)
-set -o | more -> visualizas el contenido 
+history on -> recuperar ordenes amtiguas(con la fecha) \
+noglob-> no utilices expresiones globales (?, [], *) \
+set -o | more -> visualizas el contenido \
 set +o noglob (+f) -> se apaga la opción
 set -o noglob -> enciende la opción
 si hacemos ls -d ?? , pone las ?? como si fuese un directorio y no como opción global
@@ -21,13 +21,27 @@ HELP set -o
 set -o verbose -> sobre date
 set -o xtrace (-x)-> se ve como se hace la acción, cómo el la ejecuta, sirve para ver bien la sustitución
 
-
 ### Variables (set, unset)
+V1 ="Mensaje 1"
+echo V1 -> sale V1
+echo  $V1
+$V1 para usarla
+unset V1 -> eliminar la variabler
+PATH -> variable que contiene rutas
+
 ### Alias
 alias creadir ="mkdir"
 Un alias también puede ser una búsqueda 
+Para eliminar el alias ->unalias creadir
+alias -> te dice que alias has creado
 
 ### Opciones
+echo $USER
+echo $SHELL
+which bash
+echo $HOME -> directorio de usuario de la variable user
+
+
 ### Ficheros de arranque
 
 #Ejercicios
@@ -43,11 +57,12 @@ lucia.zamudio@polifemo:~$ mkdir -p prac4/prac41  prac4/prac42/tmp1 prac4/prac42/
 2. Muévase al directorio prac43. Quite todo tipo de permisos para el grupo y el resto de los grupos al directorio prac4, prac42, tmp1 y tmp2 con un sólo comando y usando rutas relativas.
 ```bash
 lucia.zamudio@polifemo:~$ cd prac4/prac43
-
+lucia.zamudio@polifemo:~/prac4/prac43$ chmod 700 ../ ../prac42 ../prac42/tmp1 ../prac42/tmp2
 ```
 ## Ejercicio 3
 3. Muévase al directorio prac42. Cree con el cat un fichero en el directorio tmp1 que se llame prueba y contenga la frase Este es un fichero de prueba. Añada con el comando cat una nueva frase al fichero sin borrar la anterior que diga Esta frase se ha añadido después
 ```bash
+lucia.zamudio@polifemo:~/prac4/prac43$ cd ../prac42
 
 ```
 
@@ -59,12 +74,14 @@ pantalla el contenido de la variable PATH (sólo esa variable)
 ```
 
 ## Ejercicio 5
-
+5. Cree una variable llamada ORIGEN que contenga la ruta absoluta al directorio /home/so/velez/MI. Cree dos variables llamadas DESTINO1 y DESTINO2 con la ruta absoluta al 
+ directorio tmp1 y tmp2 respectivamente del directorio prac42. Visualice el contenido de estas dos variables (sólo de estas dos). Use las variables ORIGEN y DESTINO1 para copiar todos los ficheros del directorio /home/so/velez/MI que contienen una p en su nombre y terminan en .txt al directorio tmp1 de prac42
 ```bash
 
 ```
 
 ## Ejercicio 6
+6. Muévase al directorio prac43 con rutas relativas. Cree un alias llamado fnuevos que busque los ficheros (no directorios) a partir de su directorio personal a los que se haya accedido hace menos de 3 horas, empiecen por punto y terminen en e, y o c y visualice su contenido uno a uno 
 
 ```bash
 
@@ -72,6 +89,14 @@ pantalla el contenido de la variable PATH (sólo esa variable)
 
 
 ## Ejercicio 7
+7. Visualice todos los alias del sistema. Cree cinco nuevos alias:
+Uno se llamará dir y visualizará página a página todos los ficheros del directorio en el que está (incluso los que empiezan por punto), con todos los permisos en orden alfabético.dirinverso hará lo mismo pero saldrán ordenados en orden inverso Otro se llamará fecha y visualizará la fecha con el siguiente formato:
+Hoy es <día de la semana>, <día del mes> de <mes> de
+<año>. Chao
+El otro se llamará hora y visualizará la hora con el siguiente formato:
+Son las <hora> horas y <minuto> minutos. Chao
+El último debe conseguir que cuando ejecute cd.. (sin el espacio en
+blanco entre el cd y los dos puntos) no produzca error 
 
 ```bash
 
@@ -89,3 +114,32 @@ pantalla el contenido de la variable PATH (sólo esa variable)
 ```bash
 
 ```
+## Ejercicio 10
+
+```bash
+
+```
+
+## Ejercicio 11
+
+```bash
+
+```
+
+## Ejercicio 12
+
+```bash
+
+```
+## Ejercicio 13
+
+```bash
+
+```
+
+## Ejercicio 14
+
+```bash
+
+```
+

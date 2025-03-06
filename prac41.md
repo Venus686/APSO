@@ -49,6 +49,7 @@ echo $USER
 echo $SHELL
 which bash
 echo $HOME -> directorio de usuario de la variable user
+echo $HISFILE
 
 
 ### Ficheros de arranque
@@ -72,20 +73,27 @@ lucia.zamudio@polifemo:~/prac4/prac43$ chmod 700 ../ ../prac42 ../prac42/tmp1 ..
 3. Muévase al directorio prac42. Cree con el cat un fichero en el directorio tmp1 que se llame prueba y contenga la frase Este es un fichero de prueba. Añada con el comando cat una nueva frase al fichero sin borrar la anterior que diga Esta frase se ha añadido después
 ```bash
 lucia.zamudio@polifemo:~/prac4/prac43$ cd ../prac42
+lucia.zamudio@polifemo:~/prac4/prac42$ cat > ./tmp1/prueba.txt
+Este es un fichero de prueba.
+lucia.zamudio@polifemo:~/prac4/prac42$ cat >> ./tmp1/prueba.txt
 
+Esta frase se ha añadido después
 ```
 
 ## Ejercicio 4
 4. Visualice el contenido de las primeras 52 variables del sistema. Muestre por
 pantalla el contenido de la variable PATH (sólo esa variable) 
 ```bash
-
+lucia.zamudio@polifemo:~/prac4/prac42$ set | head -52
+lucia.zamudio@polifemo:~/prac4/prac42$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 ```
 
 ## Ejercicio 5
 5. Cree una variable llamada ORIGEN que contenga la ruta absoluta al directorio /home/so/velez/MI. Cree dos variables llamadas DESTINO1 y DESTINO2 con la ruta absoluta al 
  directorio tmp1 y tmp2 respectivamente del directorio prac42. Visualice el contenido de estas dos variables (sólo de estas dos). Use las variables ORIGEN y DESTINO1 para copiar todos los ficheros del directorio /home/so/velez/MI que contienen una p en su nombre y terminan en .txt al directorio tmp1 de prac42
 ```bash
+lucia.zamudio@polifemo:~/prac4/prac42$ ORIGEN="/home/so/velez/MI"
 
 ```
 

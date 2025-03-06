@@ -97,12 +97,15 @@ lucia.zamudio@polifemo:~/prac4/prac42$ ORIGEN="/home/so/velez/MI"
 lucia.zamudio@polifemo:~/prac4/prac42$ DESTINO1="/home/prac42/tmp1/"
 lucia.zamudio@polifemo:~/prac4/prac42$ DESTINO2="/home/prac42/tmp2/"
 lucia.zamudio@polifemo:~/prac4/prac42$ $DESTINO1
+lucia.zamudio@polifemo:~/prac4/prac42$ $DESTINO2
+
 
 ```
 
 ## Ejercicio 6
 6. Muévase al directorio prac43 con rutas relativas. Cree un alias llamado fnuevos que busque los ficheros (no directorios) a partir de su directorio personal a los que se haya accedido hace menos de 3 horas, empiecen por punto y terminen en e, y o c y visualice su contenido uno a uno 
 ```bash
+lucia.zamudio@polifemo:~/prac4/prac42$ cd ../prac43
 
 ```
 

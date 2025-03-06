@@ -94,12 +94,14 @@ lucia.zamudio@polifemo:~/prac4/prac42$ echo $PATH
  directorio tmp1 y tmp2 respectivamente del directorio prac42. Visualice el contenido de estas dos variables (sólo de estas dos). Use las variables ORIGEN y DESTINO1 para copiar todos los ficheros del directorio /home/so/velez/MI que contienen una p en su nombre y terminan en .txt al directorio tmp1 de prac42
 ```bash
 lucia.zamudio@polifemo:~/prac4/prac42$ ORIGEN="/home/so/velez/MI"
+lucia.zamudio@polifemo:~/prac4/prac42$ DESTINO1="/home/prac42/tmp1/"
+lucia.zamudio@polifemo:~/prac4/prac42$ DESTINO2="/home/prac42/tmp2/"
+lucia.zamudio@polifemo:~/prac4/prac42$ $DESTINO1
 
 ```
 
 ## Ejercicio 6
 6. Muévase al directorio prac43 con rutas relativas. Cree un alias llamado fnuevos que busque los ficheros (no directorios) a partir de su directorio personal a los que se haya accedido hace menos de 3 horas, empiecen por punto y terminen en e, y o c y visualice su contenido uno a uno 
-
 ```bash
 
 ```

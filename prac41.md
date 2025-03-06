@@ -13,11 +13,11 @@ set -o -> que opciones estan encendidos del bash y que comportamientos estan des
 history on -> recuperar ordenes amtiguas(con la fecha) \
 noglob-> no utilices expresiones globales (?, [], *) \
 set -o | more -> visualizas el contenido \
-set +o noglob (+f) -> se apaga la opción
-set -o noglob -> enciende la opción
+set +o noglob (+f) -> se apaga la opción \
+set -o noglob -> enciende la opción \
 si hacemos ls -d ?? , pone las ?? como si fuese un directorio y no como opción global
-Existen abreviaturas para la mayoria de opciones.
-HELP set -o
+Existen abreviaturas para la mayoria de opciones. \
+HELP set -o \
 set -o verbose -> sobre date
 set -o xtrace (-x)-> se ve como se hace la acción, cómo el la ejecuta, sirve para ver bien la sustitución
 
@@ -36,6 +36,15 @@ Para eliminar el alias ->unalias creadir
 alias -> te dice que alias has creado
 
 ### Opciones
+etc/profile -> lo que hay cada vez que iniciamos sesion(login nuevo, global) ->/etc/login
+shell nuevo(terminal nuevo) -> /etc/bash.basrc
+.profile (visualizar)
+grep bashrc .profile
+MODIFICAR EL BASHRC -> cambiar la configuración que está establecida para siempre
+
+cp .bashrc basrc_original
+joe .bashrc
+
 echo $USER
 echo $SHELL
 which bash
@@ -90,13 +99,14 @@ pantalla el contenido de la variable PATH (sólo esa variable)
 
 ## Ejercicio 7
 7. Visualice todos los alias del sistema. Cree cinco nuevos alias:
-Uno se llamará dir y visualizará página a página todos los ficheros del directorio en el que está (incluso los que empiezan por punto), con todos los permisos en orden alfabético.dirinverso hará lo mismo pero saldrán ordenados en orden inverso Otro se llamará fecha y visualizará la fecha con el siguiente formato:
-Hoy es <día de la semana>, <día del mes> de <mes> de
-<año>. Chao
+Uno se llamará dir y visualizará página a página todos los ficheros del directorio en el que está (incluso los que empiezan por punto), con todos los permisos en orden alfabético.dirinverso hará lo mismo pero saldrán ordenados en orden inverso
+
+ Otro se llamará fecha y visualizará la fecha con el siguiente formato:
+Hoy es <día de la semana>, <día del mes> de <mes> de <año>. Chao
+
 El otro se llamará hora y visualizará la hora con el siguiente formato:
 Son las <hora> horas y <minuto> minutos. Chao
-El último debe conseguir que cuando ejecute cd.. (sin el espacio en
-blanco entre el cd y los dos puntos) no produzca error 
+El último debe conseguir que cuando ejecute cd.. (sin el espacio en blanco entre el cd y los dos puntos) no produzca error 
 
 ```bash
 
@@ -104,41 +114,44 @@ blanco entre el cd y los dos puntos) no produzca error
 
 
 ## Ejercicio 8
-
+8. Cree un fichero llamado usuarios en el directorio tmp2 con la lista de todas las sesiones que hay abiertas en este instante ordenadas alfabéticamente.
+Use rutas relativas 
 ```bash
 
 ```
 
 ## Ejercicio 9
-
+. Muévase al directorio prac4. Ejecute el interprete de comandos ksh. Visualice las variables activas en este interprete de comandos. Modifique el prompt para que visualice la frase Comando::>
 ```bash
 
 ```
 ## Ejercicio 10
+10. Salga del interprete de comandos ksh y vuelva al bash. Cuente con la ayuda del who y del wc el número de sesiones que hay abiertas (debe salir un número) 
 
 ```bash
 
 ```
 
 ## Ejercicio 11
-
+11. Modifique el prompt principal para que visualice su nombre de usuario en vez del nombre de la máquina. A continuación el directorio donde está mediante ruta absoluta y al final debe aparecer el símbolo > (Ejemplo: Para el usuario velez actualmente sale velez@Polifemo:~/prac4$. Después de modificar el prompt debe salir velez: /home/velez/prac4> ) 
 ```bash
 
 ```
 
 ## Ejercicio 12
-
+12. Modifique el prompt secundario para que emita el siguiente mensaje: cierre las comillas, por favor
 ```bash
 
 ```
 ## Ejercicio 13
+13. Edite con el joe el fichero .profile. Modifique la variable PATH para que siempre se ejecuten los ficheros que se encuentran en el directorio actual. Añada la variable ORIGEN creada en el apartado 5 para que se pueda usar siempre que entre en una nueva sesión 
 
 ```bash
 
 ```
 
 ## Ejercicio 14
-
+14. Cierre la sesión. Vuelva a entrar. Añada los alias hora y fecha al .profile para que siempre se puedan ejecutar. Haga lo necesario para que los alias introducidos en el .profile se vuelvan activos y puedan ser usados. 
 ```bash
 
 ```

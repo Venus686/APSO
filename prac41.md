@@ -50,7 +50,8 @@ echo $SHELL
 which bash
 echo $HOME -> directorio de usuario de la variable user
 echo $HISFILE
-
+set-> visualizar las variables
+PS1 ->promp principal
 
 ### Ficheros de arranque
 
@@ -96,9 +97,8 @@ lucia.zamudio@polifemo:~/prac4/prac42$ echo $PATH
 lucia.zamudio@polifemo:~/prac4/prac42$ ORIGEN="/home/so/velez/MI"
 lucia.zamudio@polifemo:~/prac4/prac42$ DESTINO1="/home/prac42/tmp1/"
 lucia.zamudio@polifemo:~/prac4/prac42$ DESTINO2="/home/prac42/tmp2/"
-lucia.zamudio@polifemo:~/prac4/prac42$ $DESTINO1
-lucia.zamudio@polifemo:~/prac4/prac42$ $DESTINO2
-
+lucia.zamudio@polifemo:~/prac4/prac42$ $DESTINO1 $DESTINO2
+cp $ORIGEN/*p*.txt $DESTINO1
 
 ```
 
@@ -106,23 +106,51 @@ lucia.zamudio@polifemo:~/prac4/prac42$ $DESTINO2
 6. Muévase al directorio prac43 con rutas relativas. Cree un alias llamado fnuevos que busque los ficheros (no directorios) a partir de su directorio personal a los que se haya accedido hace menos de 3 horas, empiecen por punto y terminen en e, y o c y visualice su contenido uno a uno 
 ```bash
 lucia.zamudio@polifemo:~/prac4/prac42$ cd ../prac43
-
+lucia.zamudio@polifemo:~/prac4/prac43$ alias fnuevos='more $(find ~ !-type d
+-amin -180 +3 -name ".*[eyc]" )'
 ```
+-atime n
+              File was last accessed n*24 hours ago.   When  find  figures
+              out how many 24-hour periods ago the file was last accessed,
+              any fractional part is ignored, so to  match  -atime  +1,  a
+              file has to have been accessed at least two days ago.
 
 
 ## Ejercicio 7
 7. Visualice todos los alias del sistema. Cree cinco nuevos alias:
+   ```bash
+    lucia.zamudio@polifemo:~/prac4/prac43$ alias
+   ```
+   
 Uno se llamará dir y visualizará página a página todos los ficheros del directorio en el que está (incluso los que empiezan por punto), con todos los permisos en orden alfabético.dirinverso hará lo mismo pero saldrán ordenados en orden inverso
+```bash
+lucia.zamudio@polifemo:~/prac4/prac43$ alias dir='more| ls -a| sort'
+lucia.zamudio@polifemo:~/prac4/prac43$ alias dirinverso="more| ls -a |sort - r"
+
+```
 
  Otro se llamará fecha y visualizará la fecha con el siguiente formato:
 Hoy es <día de la semana>, <día del mes> de <mes> de <año>. Chao
+```bash
+día de la semana ->  %A
+día del mes -> %e
+mes -> %B
+año -> %Y
+lucia.zamudio@polifemo:~/prac4/prac43$ alias fecha='date+"Hoy es %A, %e de %B de %Y. Chao"'
+```
 
 El otro se llamará hora y visualizará la hora con el siguiente formato:
 Son las <hora> horas y <minuto> minutos. Chao
+```bash
+Horas-> %H
+Minutos -> %M
+lucia.zamudio@polifemo:~/prac4/prac43$ alias hora='date+ "Son las %H horas y %m minutos. Chao "'
+
+```
 El último debe conseguir que cuando ejecute cd.. (sin el espacio en blanco entre el cd y los dos puntos) no produzca error 
 
 ```bash
-
+lucia.zamudio@polifemo:~/prac4/prac43$ alias cd..="cd .."
 ```
 
 
@@ -130,31 +158,37 @@ El último debe conseguir que cuando ejecute cd.. (sin el espacio en blanco entr
 8. Cree un fichero llamado usuarios en el directorio tmp2 con la lista de todas las sesiones que hay abiertas en este instante ordenadas alfabéticamente.
 Use rutas relativas 
 ```bash
-
+lucia.zamudio@polifemo:~/prac4/prac43$ who|sort >../prac42/tmp2/usuarios
 ```
 
 ## Ejercicio 9
 . Muévase al directorio prac4. Ejecute el interprete de comandos ksh. Visualice las variables activas en este interprete de comandos. Modifique el prompt para que visualice la frase Comando::>
 ```bash
+lucia.zamudio@polifemo:~/prac4/prac43$ cd..
+lucia.zamudio@polifemo:~/prac4$ ksh
+~/prac4 [1]$ set
+PS1="Comando::>" 
 
 ```
 ## Ejercicio 10
 10. Salga del interprete de comandos ksh y vuelva al bash. Cuente con la ayuda del who y del wc el número de sesiones que hay abiertas (debe salir un número) 
-
 ```bash
-
+Comando::>exit
+lucia.zamudio@polifemo:~/prac4$ who |wc -l
 ```
 
 ## Ejercicio 11
 11. Modifique el prompt principal para que visualice su nombre de usuario en vez del nombre de la máquina. A continuación el directorio donde está mediante ruta absoluta y al final debe aparecer el símbolo > (Ejemplo: Para el usuario velez actualmente sale velez@Polifemo:~/prac4$. Después de modificar el prompt debe salir velez: /home/velez/prac4> ) 
 ```bash
+lucia.zamudio@polifemo:~/prac4$ PS1="Lucia.zamudio>"
+PS1="\u $PWD>"
 
 ```
 
 ## Ejercicio 12
 12. Modifique el prompt secundario para que emita el siguiente mensaje: cierre las comillas, por favor
 ```bash
-
+lucia.zamudio /home/lucia.zamudio/prac4> PS2="cierre las comillas, por favor"
 ```
 ## Ejercicio 13
 13. Edite con el joe el fichero .profile. Modifique la variable PATH para que siempre se ejecuten los ficheros que se encuentran en el directorio actual. Añada la variable ORIGEN creada en el apartado 5 para que se pueda usar siempre que entre en una nueva sesión 

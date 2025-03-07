@@ -62,10 +62,15 @@ tabulación de la misma forma?
 
 ## Ejercicio 6
 6. Salga de las shell que ha ejecutado y vuelva a bash.
+```bash
 $ exit
 ~/ModuloI/Practica4 [5]$ exit
+```
 
-8. Active el atributo de la shell xtrace (para mostrar el comando a ejecutar).
+## Ejercicio 7
+7. Active el atributo de la shell xtrace (para mostrar el comando a ejecutar).
+
+
 9. Desde su directorio de usuario, ejecute la orden necesaria para copiar los
 ficheros que haya desde el directorio raíz, que comiencen por rmt al
 directorio temp creado anteriormente y observar el resultado (use para ello

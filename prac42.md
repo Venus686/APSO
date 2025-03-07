@@ -41,10 +41,6 @@ mostrándolas pantalla a pantalla
 lucia.zamudio@polifemo:~/ModuloI/Practica4$ set|more
 ```
 
-```bash
-
-```
-
 4. Ejecute el shell ksh. ¿Qué cambios observa? ¿Funciona la tecla de
 tabulación de la misma forma?
 ```bash

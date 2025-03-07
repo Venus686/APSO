@@ -192,14 +192,20 @@ lucia.zamudio /home/lucia.zamudio/prac4> PS2="cierre las comillas, por favor"
 ```
 ## Ejercicio 13
 13. Edite con el joe el fichero .profile. Modifique la variable PATH para que siempre se ejecuten los ficheros que se encuentran en el directorio actual. Añada la variable ORIGEN creada en el apartado 5 para que se pueda usar siempre que entre en una nueva sesión 
-
 ```bash
-
+lucia.zamudio@polifemo:~$ joe ../.profile
+PATH=$PATH:.
+ORIGEN="/home/so/velez/MI"
+export ORIGEN
 ```
 
 ## Ejercicio 14
 14. Cierre la sesión. Vuelva a entrar. Añada los alias hora y fecha al .profile para que siempre se puedan ejecutar. Haga lo necesario para que los alias introducidos en el .profile se vuelvan activos y puedan ser usados. 
 ```bash
-
+lucia.zamudio@polifemo:~$ joe ../.profile
+alias fecha='date+ "Hoy es %A, %e de %B de %Y. Chao"'
+alias hora='date +"Son las %H horas y %M minutos. Chao"'
+Ctrl-k x
+. .profile 
 ```
 

@@ -1,4 +1,4 @@
-### Contenido:
+she    ### Contenido:
 ### Tipos de shell (sh, ksh, bash)
 sh -> tipo de shell basico, con distinta apariencia
 Nosotros usamos bash

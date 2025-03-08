@@ -69,7 +69,7 @@ $ exit
 lucia.zamudio@polifemo:~$ set -x
 ```
 
-## Ejercicio 8
+## Ejercicio 8-> (Revisar)
 8. Desde su directorio de usuario, ejecute la orden necesaria para copiar los ficheros que haya desde el directorio raíz, que comiencen por rmt al directorio temp creado anteriormente y observar el resultado (use para ello sustitución de comandos).
  ```bash
 lucia.zamudio@polifemo:~/ModuloI$ cp $(find / -type f -name "rmt*" 2>/dev/nu
@@ -101,7 +101,8 @@ lucia.zamudio@polifemo:~/ModuloI/Practica4$ man echo
 ## Ejercicio 13
 13.Visualice por pantalla el mensaje “El directorio de trabajo actual es <<ruta al directorio de trabajo actual>>”. Haga uso de la variable PWD.
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica4$ echo "El directorio de trabajo actual es $PWD"
+El directorio de trabajo actual es /home/lucia.zamudio/ModuloI/Practica4
 ```
 
 ## Ejercicio 14
@@ -113,37 +114,44 @@ lucia.zamudio@polifemo:~/ModuloI/Practica4$ man echo
 ## Ejercicio 15
 15.Muévase a su directorio de usuario mediante la orden cd sin argumentos. ¿Qué ocurre?
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica4$ unset HOME
 ```
 
 ## Ejercicio 16
 16.Cree un fichero llamado losalias, en el directorio Practica4, que contenga todos los alias definidos ordenados en orden inverso
 ```bash
-
+lucia.zamudio@polifemo:/home/lucia.zamudio/ModuloI/Practica4$ alias | sort -
+r >losalias
 ```
 
 ## Ejercicio 17
 17.Cree un alias llamado fecha, que visualice la fecha en formato “23 del 11 de 2009”
 ```bash
-
+%d-> día
+%m -> mes
+%Y -> Año
+lucia.zamudio@polifemo:/home/lucia.zamudio/ModuloI/Practica4$ alias fecha='date +"%d del %m de %Y"'
 ```
 
 ## Ejercicio 18
 18.Restaure la variable home a su directorio personal.
 ```bash
-
+lucia.zamudio@polifemo:/home/lucia.zamudio/ModuloI/Practica4$ alias HOME=/home/lucia.zamudio
 ```
 
 ## Ejercicio 19
 19.Cree un alias llamado p4, que cambie siempre al directorio Practica4 desde cualquier ubicación.
 ```bash
-
+lucia.zamudio@polifemo:/home/lucia.zamudio/ModuloI/Practica4$ alias P4='cd /
+home/lucia.zamudio/ModuloI/Practica4'
 ```
 
 ## Ejercicio 20
 20.Cámbiese al directorio Practica2 y use el alias p4 para moverse al directorio Practica4.
 ```bash
-
+lucia.zamudio@polifemo:/home/lucia.zamudio/ModuloI/Practica4$ cd ../Practica2
+lucia.zamudio@polifemo:/home/lucia.zamudio/ModuloI/Practica2$ P4
+lucia.zamudio@polifemo:/home/lucia.zamudio/ModuloI/Practica4$
 ```
 
 ## Ejercicio 21
@@ -167,15 +175,16 @@ bienvenida que incluya su nombre de usuario.
 ## Ejercicio 24
 24.Elimine el alias p4 creado anteriormente
 ```bash
-
+lucia.zamudio@polifemo:/home/lucia.zamudio/ModuloI/Practica4$ unalias P4
 ```
 ## Ejercicio 25
 25.Muestre en pantalla el mensaje “Práctica 4: Manejo de Shell… Finalizada”
 ```bash
-
+lucia.zamudio@polifemo:/home/lucia.zamudio/ModuloI/Practica4$ echo  “Práctica 4: Manejo de Shell… Finalizada”
+“Práctica 4: Manejo de Shell… Finalizada”
 ```
 ## Ejercicio 26
 26.Salga adecuadamente del sistema
 ```bash
-
+lucia.zamudio@polifemo:/home/lucia.zamudio/ModuloI/Practica4$ exit
 ```

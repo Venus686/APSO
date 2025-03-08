@@ -65,13 +65,115 @@ $ exit
 
 ## Ejercicio 7
 7. Active el atributo de la shell xtrace (para mostrar el comando a ejecutar).
+```bash
 
+```
 
-9. Desde su directorio de usuario, ejecute la orden necesaria para copiar los
-ficheros que haya desde el directorio raíz, que comiencen por rmt al
-directorio temp creado anteriormente y observar el resultado (use para ello
-sustitución de comandos).
-10. Desactive el atributo activado en el punto anterior.
-10.Cree una variable llamada P4 que contenga la ruta absoluta al directorio
-Practica4.
+## Ejercicio 8
+8. Desde su directorio de usuario, ejecute la orden necesaria para copiar los ficheros que haya desde el directorio raíz, que comiencen por rmt al directorio temp creado anteriormente y observar el resultado (use para ello sustitución de comandos).
+ ```bash
+
+```
+
+## Ejercicio 9
+9. Desactive el atributo activado en el punto anterior.
+```bash
+
+```
+
+## Ejercicio 10
+10.Cree una variable llamada P4 que contenga la ruta absoluta al directorio Practica4.
+```bash
+
+```
+## Ejercicio 11
 11.Use la variable P4 para moverse al directorio Practica4
+```bash
+
+```
+## Ejercicio 12
+12.isualice la ayuda de la orden echo.
+```bash
+
+```
+## Ejercicio 13
+13.Visualice por pantalla el mensaje “El directorio de trabajo actual es <<ruta al directorio de trabajo actual>>”. Haga uso de la variable PWD.
+```bash
+
+```
+
+## Ejercicio 14
+14.Elimine la variable HOME.
+```bash
+
+```
+
+## Ejercicio 15
+15.Muévase a su directorio de usuario mediante la orden cd sin argumentos. ¿Qué ocurre?
+```bash
+
+```
+
+## Ejercicio 16
+16.Cree un fichero llamado losalias, en el directorio Practica4, que contenga todos los alias definidos ordenados en orden inverso
+```bash
+
+```
+
+## Ejercicio 17
+17.Cree un alias llamado fecha, que visualice la fecha en formato “23 del 11 de 2009”
+```bash
+
+```
+
+## Ejercicio 18
+18.Restaure la variable home a su directorio personal.
+```bash
+
+```
+
+## Ejercicio 19
+19.Cree un alias llamado p4, que cambie siempre al directorio Practica4 desde cualquier ubicación.
+```bash
+
+```
+
+## Ejercicio 20
+20.Cámbiese al directorio Practica2 y use el alias p4 para moverse al directorio Practica4.
+```bash
+
+```
+
+## Ejercicio 21
+21.Modifique el prompt para que muestre el nombre del usuario en vez del nombre de la máquina, únicamente en la sesión en la que se realiza esta orden.
+```bash
+
+```
+
+## Ejercicio 22
+22.Haga que la variable PATH incluya la ruta al directorio de usuario de forma
+permanente.
+```bash
+
+```
+## Ejercicio 23
+23.Haga que cada vez que acceda al sistema, se muestre un mensaje de
+bienvenida que incluya su nombre de usuario.
+```bash
+
+```
+## Ejercicio 24
+24.Elimine el alias p4 creado anteriormente
+```bash
+
+```
+## Ejercicio 25
+25.Muestre en pantalla el mensaje “Práctica 4: Manejo de Shell… Finalizada”
+```bash
+
+```
+## Ejercicio 26
+26.Salga adecuadamente del sistema
+```bash
+
+```

@@ -66,35 +66,37 @@ $ exit
 ## Ejercicio 7
 7. Active el atributo de la shell xtrace (para mostrar el comando a ejecutar).
 ```bash
-
+lucia.zamudio@polifemo:~$ set -x
 ```
 
 ## Ejercicio 8
 8. Desde su directorio de usuario, ejecute la orden necesaria para copiar los ficheros que haya desde el directorio raíz, que comiencen por rmt al directorio temp creado anteriormente y observar el resultado (use para ello sustitución de comandos).
  ```bash
-
+lucia.zamudio@polifemo:~/ModuloI$ cp $(find / -type f -name "rmt*" 2>/dev/nu
+ll)  ./Practica4/temp
 ```
 
 ## Ejercicio 9
 9. Desactive el atributo activado en el punto anterior.
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI$ set +x
++ set +x
 ```
 
 ## Ejercicio 10
 10.Cree una variable llamada P4 que contenga la ruta absoluta al directorio Practica4.
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI$ P4=/home/lucia.zamudio/ModuloI/Practica4
 ```
 ## Ejercicio 11
 11.Use la variable P4 para moverse al directorio Practica4
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI$ cd $P4
 ```
 ## Ejercicio 12
 12.isualice la ayuda de la orden echo.
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica4$ man echo
 ```
 ## Ejercicio 13
 13.Visualice por pantalla el mensaje “El directorio de trabajo actual es <<ruta al directorio de trabajo actual>>”. Haga uso de la variable PWD.

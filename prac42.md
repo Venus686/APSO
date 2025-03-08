@@ -108,13 +108,13 @@ El directorio de trabajo actual es /home/lucia.zamudio/ModuloI/Practica4
 ## Ejercicio 14
 14.Elimine la variable HOME.
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica4$ unset HOME
 ```
 
 ## Ejercicio 15
 15.Muévase a su directorio de usuario mediante la orden cd sin argumentos. ¿Qué ocurre?
 ```bash
-lucia.zamudio@polifemo:~/ModuloI/Practica4$ unset HOME
+
 ```
 
 ## Ejercicio 16

@@ -19,61 +19,64 @@ lucia.zamudio@polifemo:~/ModuloI/Practica1$ mkdir ../Practica2
 ### Ejercicio 4
 Haga que los permisos del directorio Practica2 sean 'rwx------'. Se deberá usar la notación numérica. (Se deberá usar una ruta relativa).
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica1$ chmod 700 ../Practica2
 ```
 
 ### Ejercicio 5
 Cree, dentro del directorio Practica2, un fichero llamado solucion2. Dicho fichero deberá contener la solución de la presente práctica.
 ```bash
-
+lucia.zamudio@polifemo:~$ cd ModuloI/Practica2
+lucia.zamudio@polifemo:~/ModuloI/Practica2$ joe solucion2
 ```
 
 ### Ejercicio 6
 Volviendo a la primera sesión, muévase al directorio Practica2. (Se deberá usar una ruta absoluta)
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica1$ cd /home/lucia.zamudio/ModuloI/Practica2
 ```
 
 ### Ejercicio 7
 Visualice, con la orden find, todos los directorios (sólo directorios) que cuelguen a partir de /var y cuyo nombre contenga la cadena 'data'.
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica2$ find /var type -d -name "*data*"
 ```
 
 ### Ejercicio 8
 Visualice, con la orden find, todos los ficheros regulares (sólo ficheros) que cuelguen a partir de /etc y cuyo contenido haya sido modificado hace menos de 100 días.
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica2$ find -type f /etc -mtime -100
 ```
 
 ### Ejercicio 9
 Copie el fichero /etc/passwd y el fichero /etc/group al directorio Practica2.
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica2$ cp /etc/passwd /etc/group .
 ```
 
 ### Ejercicio 10
 Busque su nombre de usuario en los ficheros passwd y group que acaba de copiar.
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica2$ grep lucia.zamudio passwd
 ```
 
 ### Ejercicio 11
 Visualice el número de caracteres del fichero group.
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica2$ wc -c group
+1046 group
 ```
 
 ### Ejercicio 12
 Visualice la longitud de la línea más larga del fichero passwd.
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica2$ wc -l passwd
+202 passwd
 ```
 
 ### Ejercicio 13
 Visualice el contenido del fichero group ordenado alfabéticamente en orden inverso.
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica2$ sort -r group
 ```
 
 ### Ejercicio 14

@@ -113,13 +113,22 @@ lucia.zamudio@polifemo:~/ModuloI/Practica2$ lucia.zamudio@polifemo:~/ModuloI/Pra
 ### Ejercicio 19
 Visualice el identificador de su grupo de usuarios.
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica2$ id -g
+100
 ```
 
 ### Ejercicio 20
 Visualice el calendario del mes de enero de 2022.
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica2$ cal 01 2022
+     Enero 2022
+do lu ma mi ju vi sá
+                   1
+ 2  3  4  5  6  7  8
+ 9 10 11 12 13 14 15
+16 17 18 19 20 21 22
+23 24 25 26 27 28 29
+30 31
 ```
 
 ### Ejercicio 21

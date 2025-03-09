@@ -82,31 +82,32 @@ lucia.zamudio@polifemo:~/ModuloI/Practica2$ sort -r group
 ### Ejercicio 14
 Visualice las tres primeras líneas del fichero passwd.
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica2$ head -3 passwd
 ```
 
 ### Ejercicio 15
 Visualice las tres últimas líneas del fichero passwd.
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica2$ tail -3 passwd
 ```
 
 ### Ejercicio 16
 Cree en su directorio de usuario un enlace simbólico llamado versos, que apunte al fichero fichcancion.
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica2$ ln -s ../Practica1/Datos/fichcancion versos
 ```
 
 ### Ejercicio 17
 Busque las líneas del fichero "versos" creado anteriormente que comiencen por "Cobi".
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica2$ grep -i 'Cobi' versos
 ```
 
 ### Ejercicio 18
 Visualice los usuarios conectados al sistema, donde aparezca también la línea de cabecera de las columnas.
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica2$ lucia.zamudio@polifemo:~/ModuloI/Practica2$ who
+ -H
 ```
 
 ### Ejercicio 19

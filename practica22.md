@@ -134,19 +134,20 @@ do lu ma mi ju vi sá
 ### Ejercicio 21
 Visualice la fecha actual con el formato: "Año: 2023, Mes: 02, Dia: 08".
 ```bash
-
+lucia.zamudio@polifemo:~$ date +"Año: %Y, Mes: %m, Dia:%d"
+Año: 2025, Mes: 03, Dia:09
 ```
 
 ### Ejercicio 22
 Visualice el Terminal desde el que está conectado.
 ```bash
-
+lucia.zamudio@polifemo:~$ tty
 ```
 
 ### Ejercicio 23
 Ejecute el monitor del sistema top.
 ```bash
-
+lucia.zamudio@polifemo:~$ top
 ```
 
 ### Ejercicio 24
@@ -158,29 +159,47 @@ Abra una nueva sesión y cámbiese a ella.
 ### Ejercicio 25
 Mate (enviar la señal 9) el proceso correspondiente a la orden top.
 ```bash
-
+lucia.zamudio@polifemo:~$ ps -u lucia.zamudio
+  PID TTY          TIME CMD
+12699 ?        00:00:00 systemd
+12700 ?        00:00:00 (sd-pam)
+12780 ?        00:00:00 sshd
+12784 pts/0    00:00:00 bash
+13009 ?        00:00:00 sshd
+13015 pts/2    00:00:00 bash
+13652 pts/2    00:00:00 top
+13930 pts/0    00:00:00 ps
+lucia.zamudio@polifemo:~$ kill -9 pid-13652
+-bash: kill: pid-13652: arguments must be process or job IDs
+lucia.zamudio@polifemo:~$ kill -9 pid-13652
+-bash: kill: pid-13652: arguments must be process or job IDs
 ```
 
 ### Ejercicio 26
 Envíe un mensaje al usuario usuario.destino que desee y que esté conectado con la frase "Práctica 2 a punto de finalizar por <nombre.usuario>".
 ```bash
+lucia.zamudio@polifemo:~$ write ruben.conde
+"Práctica 2 a punto de finalizar por <nombre.usuario>"
 
 ```
 
 ### Ejercicio 27
 Deshabilite la llegada de mensajes instantáneos y probar con algún compañero/a.
 ```bash
-
+lucia.zamudio@polifemo:~$ mesg n
+lucia.zamudio@polifemo:~$ write ruben.conde
+write: write: you have write permission turned off.
 ```
 
 ### Ejercicio 28
 Muestre en pantalla el mensaje "Práctica 2: Manejo de Shell... Finalizada".
 ```bash
-
+lucia.zamudio@polifemo:~$ echo "Práctica 2: Manejo de Shell... Finalizada".
+Práctica 2: Manejo de Shell... Finalizada.
 ```
 
 ### Ejercicio 29
 Salga adecuadamente del sistema.
 ```bash
-
+lucia.zamudio@polifemo:~$ exit
 ```

@@ -5,7 +5,7 @@
 ````bash
   -> $(orden) = `orden ` 
 ````
-  ACENTO GRAVE -> `   `
+  ACENTO GRAVE -> ```bash `   ` ```
 
 ### \ 
 echo \$PATH contiene $PATH 

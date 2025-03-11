@@ -159,7 +159,10 @@ lucia.zamudio@polifemo:~$ mkdir -p prac5 prac5/prac51 prac5/prac52 prac5/guiones
 2. Añada en el fichero .profile a la variable PATH una nueva ruta, la ruta hasta el directorio guiones que hemos creado en el apartado 1. Esta nueva línea no tendrá efecto hasta que no ejecutemos el fichero .profile. Ejecute el fichero .profile de la forma adecuada para que el nuevo PATH tome efecto. Visualice de nuevo la variable PATH para asegurarse que tiene lo que tenía en la práctica 4 más la nueva ruta que hemos añadido en este apartado. \
 IMPORTANTE!!! No continúe adelante si no ha conseguido añadir esa nueva ruta a la variable PATH. Si continúa con el resto de apartados sin hacer los anteriores no podrá realizarlos correctamente. 
 ```bash
-
+lucia.zamudio@polifemo:~$ joe .profile
+lucia.zamudio@polifemo:~$ . .profile
+lucia.zamudio@polifemo:~$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/lucia.zamudio:.:/home/lucia.zamudio/prac5/guiones
 ```
 
 ### Ejercicio 3

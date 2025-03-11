@@ -160,6 +160,7 @@ lucia.zamudio@polifemo:~$ mkdir -p prac5 prac5/prac51 prac5/prac52 prac5/guiones
 IMPORTANTE!!! No continúe adelante si no ha conseguido añadir esa nueva ruta a la variable PATH. Si continúa con el resto de apartados sin hacer los anteriores no podrá realizarlos correctamente. 
 ```bash
 lucia.zamudio@polifemo:~$ joe .profile
+
 lucia.zamudio@polifemo:~$ . .profile
 lucia.zamudio@polifemo:~$ echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/lucia.zamudio:.:/home/lucia.zamudio/prac5/guiones
@@ -168,7 +169,10 @@ lucia.zamudio@polifemo:~$ echo $PATH
 ### Ejercicio 3
 3. Muévase al directorio guiones. Cree un guión llamado busca en este directorio que reciba como parámetros un directorio y un número. El guión debe buscar los ficheros (no directorios) a partir del directorio especificado que hayan sido modificados hace menos de n días, siendo n el número de días especificado. Muévase de nuevo a su directorio personal. Ejecute desde aquí el guión pasando como parámetros su directorio personal y el número 10.
 ```bash
-
+lucia.zamudio@polifemo:~$ cd prac5/guiones
+lucia.zamudio@polifemo:~/prac5/guiones$ joe busca
+find $1 ! -type d -mtime -$2
+lucia.zamudio@polifemo:~/prac5/guiones$ busca $HOME 10
 ```
 
 ### Ejercicio 4

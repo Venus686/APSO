@@ -179,18 +179,26 @@ HAGA QUE TOMEN EFECTO
 
 ### Ejercicio 5
 5. Cree desde aquí, en el directorio guiones, un guión llamado fnuevos que pasándole como parámetro el nombre de un fichero y un directorio indique cuántos ficheros hay a partir del directorio indicado que son más nuevos que el fichero especificado (debe salir un número). Cree otro guion llamado fviejos que pasando los mismos parámetros indique cuántos son más viejos que el fichero especificado. 
+```bash
 
+```
 
 ### Ejercicio 6
 6. Vaya al directorio prac51. Cree un guión llamado trataf en este directorio que para cada fichero que encuentre a partir del directorio pasado como parámetro que termine en .txt lo visualice por pantalla página a página.
 Los errores no deben salir por pantalla. Muévase a su directorio personal. Compruebe desde aquí su ejecución pasando como parámetro el directorio /home/so/velez/MI.
+```bash
 
+```
 ### Ejercicio 7
 7. Introduzca en el fichero .profile la modificación realizada a la variable PS1 (en la practica 4), para que el prompt sea nuestro nombre de usuario, seguido de la ruta y del símbolo >. Haga que tome efecto.
+```bash
 
+```
 ### Ejercicio 8
 8. Usando el comando cat cree un guión en el directorio guiones llamado copiar al que le pasen como parámetro dos nombres de ficheros y la ruta absoluta a un directorio y copie el fichero especificado en primer lugar en el directorio especificado, con el nombre del fichero especificado en segundo lugar.
+```bash
 
+```
 ### Ejercicio 9
 9. Muévase al directorio guiones. Cree un guión llamado vertodo en este
 directorio que visualice página a página el contenido de todos los ficheros
@@ -198,7 +206,9 @@ directorio que visualice página a página el contenido de todos los ficheros
 momento empiecen por s y terminen en .c o .p y sean más nuevos que un
 fichero pasado como parámetro. Los posibles errores no deben salir por
 pantalla y los ficheros deben ser visualizados por orden alfabético. 
+```bash
 
+```
 ### Ejercicio 10
 10. Cree en el directorio guiones un guión llamado infor que muestre la
 siguiente información:
@@ -207,6 +217,8 @@ siguiente información:
 - Terminal en el que se encuentra
 - Fecha y hora actual del sistema
 - Calendario de Marzo de este año 
+```bash
 
+```
 
 

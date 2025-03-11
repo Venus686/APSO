@@ -150,7 +150,7 @@ $0 -> nombre del archivo ejecutado
 # Ejercicios
 
 ### Ejercicio 1
-Cree con un solo comando el siguiente árbol de directorios a partir de su directorio personal mediante rutas absolutas. 
+1. Cree con un solo comando el siguiente árbol de directorios a partir de su directorio personal mediante rutas absolutas. 
 ```bash
 
 ```
@@ -169,7 +169,7 @@ IMPORTANTE!!! No continúe adelante si no ha conseguido añadir esa nueva ruta a
 ```
 
 ### Ejercicio 4
- Cree tres nuevos alias en el fichero .profile. Uno se llamará listaf y visualizará la lista de todos los ficheros y directorios a partir de su directorio personal (incluso los que empiezan por punto) así como sus permisos (opción -l).
+4. Cree tres nuevos alias en el fichero .profile. Uno se llamará listaf y visualizará la lista de todos los ficheros y directorios a partir de su directorio personal (incluso los que empiezan por punto) así como sus permisos (opción -l).
 Otro se llamará gente y contará los usuarios que actualmente se encuentran en el sistema (Se supone que cada fila del comando who es un usuario).
 Otro se llamará saludo y visualizará el siguiente mensaje: Hola. Son las <hora> horas y <minuto> minutos del <día de la semana en letras> <día del mes> de <mes> de <año>. Chao. 
 HAGA QUE TOMEN EFECTO 

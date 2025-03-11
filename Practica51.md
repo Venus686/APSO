@@ -152,7 +152,7 @@ $0 -> nombre del archivo ejecutado
 ### Ejercicio 1
 1. Cree con un solo comando el siguiente árbol de directorios a partir de su directorio personal mediante rutas absolutas. 
 ```bash
-
+lucia.zamudio@polifemo:~$ mkdir -p prac5 prac5/prac51 prac5/prac52 prac5/guiones
 ```
 
 ### Ejercicio 2

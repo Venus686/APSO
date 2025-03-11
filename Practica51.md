@@ -190,20 +190,33 @@ lucia.zamudio@polifemo:~/prac5/guiones$ . ../../.profile
 ### Ejercicio 5
 5. Cree desde aquí, en el directorio guiones, un guión llamado fnuevos que pasándole como parámetro el nombre de un fichero y un directorio indique cuántos ficheros hay a partir del directorio indicado que son más nuevos que el fichero especificado (debe salir un número). Cree otro guion llamado fviejos que pasando los mismos parámetros indique cuántos son más viejos que el fichero especificado. 
 ```bash
-
+lucia.zamudio@polifemo:~/prac5/guiones$ joe fnuevos
+find $1  -newer $2 | wc -l
+lucia.zamudio@polifemo:~/prac5/guiones$ joe fviejos
+find $1 ! -newer $2|wc -l
+lucia.zamudio@polifemo:~/prac5/guiones$ ./fnuevos $HOME /home/lucia.zamudio/prac2/f1.txt
+114
+lucia.zamudio@polifemo:~/prac5/guiones$ ./fviejos $HOME /home/lucia.zamudio/prac2/f1.txt
+17
 ```
 
 ### Ejercicio 6
 6. Vaya al directorio prac51. Cree un guión llamado trataf en este directorio que para cada fichero que encuentre a partir del directorio pasado como parámetro que termine en .txt lo visualice por pantalla página a página.
 Los errores no deben salir por pantalla. Muévase a su directorio personal. Compruebe desde aquí su ejecución pasando como parámetro el directorio /home/so/velez/MI.
 ```bash
-
+lucia.zamudio@polifemo:~/prac5/guiones$ cd ../prac51
+lucia.zamudio@polifemo:~/prac5/prac51$ joe trataf
+more $(find $1 -type f -name "*.txt" 2>/dev/null)
+lucia.zamudio@polifemo:~/prac5/prac51$ cd
+lucia.zamudio@polifemo:~$ prac5/prac51/trataf /home/so/velez/MI
 ```
+
 ### Ejercicio 7
 7. Introduzca en el fichero .profile la modificación realizada a la variable PS1 (en la practica 4), para que el prompt sea nuestro nombre de usuario, seguido de la ruta y del símbolo >. Haga que tome efecto.
 ```bash
 
 ```
+
 ### Ejercicio 8
 8. Usando el comando cat cree un guión en el directorio guiones llamado copiar al que le pasen como parámetro dos nombres de ficheros y la ruta absoluta a un directorio y copie el fichero especificado en primer lugar en el directorio especificado, con el nombre del fichero especificado en segundo lugar.
 ```bash

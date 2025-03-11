@@ -181,7 +181,10 @@ Otro se llamará gente y contará los usuarios que actualmente se encuentran en 
 Otro se llamará saludo y visualizará el siguiente mensaje: Hola. Son las <hora> horas y <minuto> minutos del <día de la semana en letras> <día del mes> de <mes> de <año>. Chao. 
 HAGA QUE TOMEN EFECTO 
 ```bash
-
+alias listaf= 'ls $HOME -laR'
+alias gente= 'who | wc -l'
+alias saludo= 'date +"Son las %H horas y %M minutos del %A %d de %B de %Y. Chao" '
+lucia.zamudio@polifemo:~/prac5/guiones$ . ../../.profile
 ```
 
 ### Ejercicio 5
@@ -210,7 +213,7 @@ Los errores no deben salir por pantalla. Muévase a su directorio personal. Comp
 9. Muévase al directorio guiones. Cree un guión llamado vertodo en este
 directorio que visualice página a página el contenido de todos los ficheros
 (no directorios) que a partir del directorio en el que se encuentra en ese
-momento empiecen por s y terminen en .c o .p y sean más nuevos que un
+momento empiecen por s y terminen en [q](url).c o .p y sean más nuevos que un
 fichero pasado como parámetro. Los posibles errores no deben salir por
 pantalla y los ficheros deben ser visualizados por orden alfabético. 
 ```bash

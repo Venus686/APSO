@@ -214,7 +214,10 @@ lucia.zamudio@polifemo:~$ prac5/prac51/trataf /home/so/velez/MI
 ### Ejercicio 7
 7. Introduzca en el fichero .profile la modificación realizada a la variable PS1 (en la practica 4), para que el prompt sea nuestro nombre de usuario, seguido de la ruta y del símbolo >. Haga que tome efecto.
 ```bash
-
+lucia.zamudio@polifemo:~$ joe .profile
+PS1='\u $PWD>'
+lucia.zamudio@polifemo:~$ . .profile
+lucia.zamudio /home/lucia.zamudio>
 ```
 
 ### Ejercicio 8

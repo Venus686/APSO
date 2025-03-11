@@ -90,3 +90,27 @@ Con el exit se finaliza un guion
 
 Segunda manera de ejecutar un proceso, es crear un proceso nuevo que sea g2. Entonces bash habrá creado un proceso.
 
+
+# Ejercicios
+
+### Ejercicio 1
+Cree con un solo comando el siguiente árbol de directorios a partir de su directorio personal mediante rutas absolutas. 
+```bash
+
+```
+
+### Ejercicio 2
+2. Añada en el fichero .profile a la variable PATH una nueva ruta, la ruta hasta el directorio guiones que hemos creado en el apartado 1. Esta nueva línea no tendrá efecto hasta que no ejecutemos el fichero .profile. Ejecute el fichero .profile de la forma adecuada para que el nuevo PATH tome efecto. Visualice de nuevo la variable PATH para asegurarse que tiene lo que tenía en la práctica 4 más la nueva ruta que hemos añadido en este apartado. \
+IMPORTANTE!!! No continúe adelante si no ha conseguido añadir esa nueva ruta a la variable PATH. Si continúa con el resto de apartados sin hacer los anteriores no podrá realizarlos correctamente. 
+```bash
+
+```
+
+### Ejercicio 3
+
+### Ejercicio 4
+
+### Ejercicio 5
+
+### Ejercicio 6
+

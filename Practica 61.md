@@ -9,6 +9,7 @@
 ```bash
 date;ps
 ```
+```
 ###EVALUCIÓN ARITMÉTICA
 expr-> devuelve el resultado de la siguiente operación
 ```bash
@@ -34,8 +35,42 @@ then
 fi
 
 ```
+###CASE
+```bash
+case expresion in
+       valor1) comandos1
+       comandos1;;
+ valor2) comandos2
+       comandos2;;
+ ...
+ *)      otros_comandos
+       otros_comandos;;
+esac
+```
+```bash
+#!/bin/bash
+ # Ejemplo de uso del case
+ echo OPCIONES
+ echo --------
+ echo L - listar información del fichero $1
+ echo V - visualizar contenido del fichero $1
+ echo E - editar fichero $1
+ echo R - borrar fichero $1
+ echo
+ echo -n "Selecciona una opción: "
+ read OPCION
+ clear
+ case $OPCION in
+       L) ls -l $1;;
+       E) joe $1;;
+       V) more $1;;
+       R) rm -f $1;;
+       l|e|r|a|v) echo Debes escribir la opción en mayúsculas.;;
+       *) echo Esa opción no existe;;
+ esac
 
-
+```
+-n -> la lectura a continuación de la línea (NO HAY SALTO DE LÍNEA)
 
 
 # Ejercicios

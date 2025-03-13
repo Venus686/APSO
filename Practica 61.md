@@ -123,11 +123,24 @@ lucia.zamudio /home/lucia.zamudio>mkdir -p prac6/prac6 prac6/fuentes/tmp1 prac6/
 ### Incluya dentro del fichero .profile la variable GUION con la ruta al directorio guiones creado anteriormente. Haga que tome efecto esta variable. Copie todos los ficheros que a partir de su directorio personal terminen en .txt en el directorio tmp1.
 ```bash
 GUION=/home/lucia.zamudio/prac6/guiones
+export GUION
 lucia.zamudio /home/lucia.zamudio>cp $(find ~ -type f -name "*.txt" ./prac6/fuentes/tmp1
+lucia.zamudio /home/lucia.zamudio>cp $(find ~ -type f -name "*.txt") ./prac6/fuentes/tmp1
+lucia.zamudio /home/lucia.zamudio>ls prac6/fuentes/tmp1
 ```
 ## Ejercicio 3
 ### Muévase al directorio guiones. Cree un guión en el directorio guiones llamado tratafichero. Este guión debe recoger un único parámetro. Si el parámetro es un fichero ordinario debe visualizar su contenido con el comando more. Si se trata de un directorio, se debe ver el contenido del mismo con el comando ls -la. Si no es ni un fichero ni un directorio debe hacerse un echo del parámetro. (Se necesita usar el comando test y la estructura if).
 ```bash
+lucia.zamudio /home/lucia.zamudio>cd prac6/guiones
+if [ -f $1 ] ; then
+        more $1
+elsif test -d $1
+        ls -la $1
+else
+        echo $1
+fi
+lucia.zamudio /home/lucia.zamudio/prac6/guiones>chmod u+x tratafichero
+lucia.zamudio /home/lucia.zamudio/prac6/guiones>tratafichero ../fuentes/tmp1/f1.txt
 
 ```
 ## Ejercicio 4

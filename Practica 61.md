@@ -1,3 +1,4 @@
+```markdown
 #Contenido:
 - Estructuras de control en guiones.
 - if, case
@@ -20,11 +21,24 @@ man test-> para ver las expresiones condicionales y las comparaciones
 x -lt y - x menor que y
 
 ###IF
+siempre va al comienzo de una línea, excepto si está separado por un ;
+```bash
+if condición
+then
+      comandos
+[elif condición
+ then
+      comandos ]
+[else
+      comandos_alternativos ]
+fi
+
+```
 
 
 
 
-```markdown
+
 # Ejercicios
 
 ```bash

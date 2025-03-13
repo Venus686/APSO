@@ -1,0 +1,19 @@
+#Contenido:
+- Estructuras de control en guiones.
+- if, case
+- for, while, until
+- break, continue
+
+; -> acaba la orden y empieza otra nueva.
+```bash
+date;ps
+```
+###EVALUCIÓN ARITMÉTICA
+expr-> devuelve el resultado de la siguiente operación
+```bash
+expr=6+8
+RES=$( expr 5 + 8 )
+RES=$(( 5000 + 8 )) -> DEJAR ESPACIO ENTRE LOS PARÉNTESIS Y LOS NÚMEROS
+```
+###EXPRESIONES CONDICIONALES
+

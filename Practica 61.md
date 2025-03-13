@@ -146,11 +146,17 @@ lucia.zamudio /home/lucia.zamudio/prac6/guiones>tratafichero ../fuentes/tmp1/f1.
 ## Ejercicio 4
 ### Muévase al directorio prac6 que está dentro de prac6. Ejecute desde aquí el guión anterior dos veces. La primera vez pásele como parámetro $HOME/prac2/f1.txt. La segunda pásele como parámetro la variable GUION creada en el apartado 2.
 ```bash
+lucia.zamudio /home/lucia.zamudio/prac6/guiones>cd ../prac6
+lucia.zamudio /home/lucia.zamudio/prac6/prac6>../guiones/tratafichero $HOME/
+prac2/f1.txt
+lucia.zamudio /home/lucia.zamudio/prac6/prac6>../guiones/tratafichero $GUION
 
+/home/lucia.zamudio/prac6/guiones
 ```
 ## Ejercicio 5
 ### Muévase al directorio guiones. Cree un guión llamado fpfinal que copie todos los nombres de enlaces simbólicos encontrados en un directorio especificado, cuyo nombre coincida con el segundo parámetro, y los guarde en un archivo enlaces.txt dentro del tercer directorio especificado. Los errores no deben mostrarse en pantalla.
 ```bash
+lucia.zamudio /home/lucia.zamudio/prac6/prac6>cd ../guiones
 
 ```
 ## Ejercicio 6

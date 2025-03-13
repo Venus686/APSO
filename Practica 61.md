@@ -17,11 +17,11 @@ expr=6+8
 RES=$( expr 5 + 8 )
 RES=$(( 5000 + 8 )) -> DEJAR ESPACIO ENTRE LOS PARÉNTESIS Y LOS NÚMEROS
 ```
-###EXPRESIONES CONDICIONALES
+### EXPRESIONES CONDICIONALES
 man test-> para ver las expresiones condicionales y las comparaciones
 x -lt y - x menor que y
 
-###IF
+### IF
 siempre va al comienzo de una línea, excepto si está separado por un ;
 ```bash
 if condición
@@ -35,7 +35,7 @@ then
 fi
 
 ```
-###CASE
+### CASE
 ```bash
 case expresion in
        valor1) comandos1
@@ -71,8 +71,46 @@ esac
 
 ```
 -n -> la lectura a continuación de la línea (NO HAY SALTO DE LÍNEA)
+doble ; -> para hacer el break
 
+### FOR -> recorrer una lista
+```bash
+for variable in conjunto
+do
+       comandos
+done
+```
+```bash
+#!/bin/bash
+# Ejemplo de uso del for
+for i in 8 10 2 5 pepe
+do
+      echo "Esta es la iteracion para $i"
+      echo "Visualizo la iteracion +10 = $(($i+10))"
+done
+```
+```bash
+for ((i=1; i<10;i++))
+do 
+      echo
+done
+```
 
+### WHILE
+```bash
+while condición
+do
+       comandos
+done
+```
+
+### UNTIL
+```bash
+until condición
+do
+       comandos
+done
+```
 # Ejercicios
 
 ```bash

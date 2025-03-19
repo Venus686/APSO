@@ -157,21 +157,55 @@ lucia.zamudio /home/lucia.zamudio/prac6/prac6>../guiones/tratafichero $GUION
 ### Muévase al directorio guiones. Cree un guión llamado fpfinal que copie todos los nombres de enlaces simbólicos encontrados en un directorio especificado, cuyo nombre coincida con el segundo parámetro, y los guarde en un archivo enlaces.txt dentro del tercer directorio especificado. Los errores no deben mostrarse en pantalla.
 ```bash
 lucia.zamudio /home/lucia.zamudio/prac6/prac6>cd ../guiones
+#!/bin/bash
+if [ $# != 3 ]; then
+        echo "Se necesitan al menos 3 parámetros"
+elif test ! -d $1 | test ! -d $3; then
+        echo "El primer y tercer parámetro han de ser directorios"
+else
+        find $1 -type l -name "$2" -printf "%f\n" 2> /dev/null > $3/enlaces.
+fi
 
 ```
 ## Ejercicio 6
 ### Cree un guión llamado mtam que muestre, para cada fichero encontrado a partir del directorio pasado como primer parámetro cuyo nombre coincide con el segundo parámetro, su tamaño. Compruebe que el número de parámetros es el correcto y que el primero es un directorio. (Usa el for en el guión).
 ```bash
-
+#!/bin/bash
+if [ $# -eq 2 ] & [ -d $1 ];then
+for i in $(find $1 -name "$2" )
+do
+         echo $(wc -c $i)
+done
+else
+        echo"Ha habido un error."
+fi
 ```
 ## Ejercicio 7
 ### Cree un guión llamado anida, al que se le pasará un parámetro y deberá hacer lo siguiente: Pedirá que se introduzca un número por el teclado y creará tantos directorios anidados como indique el número leído, a partir del directorio en el que nos encontramos.
 ```bash
-
+lucia.zamudio /home/lucia.zamudio/prac6/guiones>joe anida
+#!/bin/bash
+BUCLE=0
+dir=$PWD
+echo  "Introduce un numero: "
+read NUM
+while [ $BUCLE -lt $NUM ]
+do
+        mkdir $dir/$1
+        dir=$dir/$1
+        BUCLE=$(($BUCLE + 1))
+done
+lucia.zamudio /home/lucia.zamudio/prac6/guiones>cd ../fuentes/tmp2
+lucia.zamudio /home/lucia.zamudio/prac6/fuentes/tmp2>../../guiones/anida p6
+Introduce un numero:
+3
 ```
+
 ## Ejercicio 8
 ### Muévase al directorio guiones. Cree un guión llamado opcion que lea una palabra del teclado. Si la palabra empieza por un número almacena la palabra en un fichero llamado numero, en un fichero llamado vocal si empieza por vocal y en un fichero llamado otro para cualquier otro caso. Use el case para decidir en qué fichero guardar la palabra.
 ```bash
+lucia.zamudio /home/lucia.zamudio/prac6/fuentes/tmp2>cd ../../guiones
+
 
 ```
 ## Ejercicio 9

@@ -223,17 +223,23 @@ lucia.zamudio /home/lucia.zamudio>
 ### Ejercicio 8
 8. Usando el comando cat cree un guión en el directorio guiones llamado copiar al que le pasen como parámetro dos nombres de ficheros y la ruta absoluta a un directorio y copie el fichero especificado en primer lugar en el directorio especificado, con el nombre del fichero especificado en segundo lugar.
 ```bash
+lucia.zamudio /home/lucia.zamudio>cat >prac5/guiones/copiar
+cp $1 $3/$2lucia.zamudio /home/lucia.zamudio>chmod u+x prac5/guiones/copiar
 
 ```
 ### Ejercicio 9
 9. Muévase al directorio guiones. Cree un guión llamado vertodo en este
 directorio que visualice página a página el contenido de todos los ficheros
 (no directorios) que a partir del directorio en el que se encuentra en ese
-momento empiecen por s y terminen en [q](url).c o .p y sean más nuevos que un
+momento empiecen por s y terminen en .c o .p y sean más nuevos que un
 fichero pasado como parámetro. Los posibles errores no deben salir por
 pantalla y los ficheros deben ser visualizados por orden alfabético. 
 ```bash
-
+lucia.zamudio /home/lucia.zamudio>cd prac5/guiones
+lucia.zamudio /home/lucia.zamudio/prac5/guiones>joe vertodo
+more $(find .! -type d -name "s*.[cp]" -newer $1 2>/dev/null |sort)
+lucia.zamudio /home/lucia.zamudio/prac5/guiones>chmod u+x vertodo
+lucia.zamudio /home/lucia.zamudio/prac5/guiones>ls -l
 ```
 ### Ejercicio 10
 10. Cree en el directorio guiones un guión llamado infor que muestre la
@@ -244,7 +250,29 @@ siguiente información:
 - Fecha y hora actual del sistema
 - Calendario de Marzo de este año 
 ```bash
+lucia.zamudio /home/lucia.zamudio/prac5/guiones>joe infor
 
+^K  I    infor (Modified)                                  Row 6    Col 1
+id -nu
+id -ng
+tty
+date
+cal 03 2035
+
+
+lucia.zamudio /home/lucia.zamudio/prac5/guiones>chmod u+x infor
+lucia.zamudio /home/lucia.zamudio/prac5/guiones>infor
+lucia.zamudio
+users
+/dev/pts/2
+mié mar 19 14:22:52 CET 2025
+     Marzo 2035
+do lu ma mi ju vi sá
+             1  2  3
+ 4  5  6  7  8  9 10
+11 12 13 14 15 16 17
+18 19 20 21 22 23 24
+25 26 27 28 29 30 31
 ```
 
 

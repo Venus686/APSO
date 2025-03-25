@@ -207,25 +207,34 @@ sudo delgrpoup practica8
 ### Ejercicio 17
 17. Instale el paquete quota.
 ```bash
-h
+lucia@lucia-VirtualBox:~$ sudo apt install quota
 ```
 ### Ejercicio 18
 18. Visualice los dispositivos montados
 ```bash
-l
+mount
+df -> que hay montado en el sistema
+partición donde tienes asignado el sistema
+
 ```
 
 ### Ejercicio 19
 19. Modifique el archivo fstab para que permita cuotas de usuarios en /.Después de modificarlo, remonte el sistema de archivos con sudo mount -o remount /.
 ```bash
-h
+lucia@lucia-VirtualBox:~$ sudo cp /etc/fstab /etc/fstab.original
+defaults,usrquota 0 1 swap
+sudo mount -o remount /
+sudo systemctl daemon-reload
 ```
 
 
 ### Ejercicio 20
 20. Chequee el estado del sistema de cuotas
 ```bash
-h
+sudo quotacheck 
+sudo quotacheck -umv /
+ls /
+aquota.user
 ```
 ### Ejercicio 21
 21. Comprueba la existencia de aquota.user en el directorio /
@@ -235,7 +244,7 @@ h
 ### Ejercicio 22
 22. Active las cuotas de usuario
 ```bash
-h
+sudo quotaon -u /
 ```
 ### Ejercicio 23
 23. Cree un nuevo usuario llamado user4

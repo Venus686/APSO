@@ -205,16 +205,35 @@ Introduce un numero:
 ### Muévase al directorio guiones. Cree un guión llamado opcion que lea una palabra del teclado. Si la palabra empieza por un número almacena la palabra en un fichero llamado numero, en un fichero llamado vocal si empieza por vocal y en un fichero llamado otro para cualquier otro caso. Use el case para decidir en qué fichero guardar la palabra.
 ```bash
 lucia.zamudio /home/lucia.zamudio/prac6/fuentes/tmp2>cd ../../guiones
+#!/bin/bash
 
-
+while [ "$PALABRA" != "." ]
+do
+echo -n "Introduce una palabra: "
+read PALABRA
+case $PALABRA in
+        [0-9]*) echo $PALABRA >>numero;;
+        [aeiouAEIOU]*) echo $PALABRA >>vocal;;
+        *)echo $PALABRA >>otro;;
+esac
+done
 ```
 ## Ejercicio 9
 ### Modifique los permisos de los directorios tmp1 y tmp2 para que el propietario tenga todos los permisos menos el de ejecución, el grupo solo el de lectura y los otros solo el de ejecución.
 ```bash
-
+rwx rwx rwx
+110 100 001
+6 4 1
+lucia.zamudio /home/lucia.zamudio/prac6/guiones>chmod 641 ../fuentes/tmp1 ../fuentes/tmp2
+lucia.zamudio /home/lucia.zamudio/prac6/guiones>ls -l ../fuentes
+total 12
+-rw-r--r-- 1 lucia.zamudio users   58 mar 18 11:23 enlaces.txt
+drw-r----x 2 lucia.zamudio users 4096 mar 13 11:47 tmp1
+drw-r----x 3 lucia.zamudio users 4096 mar 19 14:57 tmp2
 ```
 ## Ejercicio 10
 ### Consulte el número de procesos total que tiene activos en este preciso momento (contando los de todas las ventanas abiertas). (Se usa ps y wc).
 ```bash
-
+lucia.zamudio /home/lucia.zamudio/prac6/guiones>ps -u lucia.zamudio | wc -l
+7
 ```

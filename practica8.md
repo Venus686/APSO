@@ -125,13 +125,52 @@ lucia@lucia-VirtualBox:~$ sudo usermod -d /home/user2b -m user2
 ### EJERCICIO 11
 11. Elimine del sistema el usuario user1, haciendo una copia de seguridad de  sus datos en el directorio home y eliminando todos sus ficheros del sistema.
 ```bash
-
+lucia@lucia-VirtualBox:~$ sudo delsuser --remove-home user2
 
 ```
 
 ### EJERCICIO 12
 12. Añada un nuevo usuario al sistema, llamado user3, asigándole como UID 500 y haciendo que su cuenta esté deshabilitada hasta que le demos una clave.
 ```bash
+ucia@lucia-VirtualBox:~$ sudo adduser --uid 500 -disable -login user3
+Option disable is ambiguous (disabled-login, disabled-password)
+Unknown option: login
+adduser [--uid id] [--firstuid id] [--lastuid id]
+        [--gid id] [--firstgid id] [--lastgid id] [--ingroup group]
+        [--add-extra-groups] [--encrypt-home] [--shell shell]
+        [--comment comment] [--home dir] [--no-create-home]
+        [--allow-all-names] [--allow-bad-names]
+        [--disabled-password] [--disabled-login]
+        [--conf file] [--extrausers] [--quiet] [--verbose] [--debug]
+        user
+    Add a normal user
+
+adduser --system
+        [--uid id] [--group] [--ingroup group] [--gid id]
+        [--shell shell] [--comment comment] [--home dir] [--no-create-home]
+        [--conf file] [--extrausers] [--quiet] [--verbose] [--debug]
+        user
+   Add a system user
+
+adduser --group
+        [--gid ID] [--firstgid id] [--lastgid id]
+        [--conf file] [--extrausers] [--quiet] [--verbose] [--debug]
+        group
+addgroup
+        [--gid ID] [--firstgid id] [--lastgid id]
+        [--conf file] [--extrausers] [--quiet] [--verbose] [--debug]
+        group
+   Add a user group
+
+addgroup --system
+        [--gid id]
+        [--conf file] [--extrausers] [--quiet] [--verbose] [--debug]
+        group
+   Add a system group
+
+adduser [--extrausers] USER GROUP
+   Add an existing user to an existing group
+
 
 ```
 
@@ -139,6 +178,11 @@ lucia@lucia-VirtualBox:~$ sudo usermod -d /home/user2b -m user2
 ### Ejercicio 13
 Cambie la shell por defecto del usuario user3 a ksh. Instale ksh si fuese necesario.
 ```bash
+lucia@lucia-VirtualBox:~$ sudo apt install ksh
+lucia@lucia-VirtualBox:~$ which ksh
+/usr/bin/ksh
+lucia@lucia-VirtualBox:~$ sudo usermod -s /usr/bin/ksh user3
+grep user3/etc/psswd
 
 ```
 
@@ -146,15 +190,88 @@ Cambie la shell por defecto del usuario user3 a ksh. Instale ksh si fuese necesa
 ### Ejercicio 14
 14. Visualice cuando expira su cuenta de usuario
 ```bash
-
+man chage
+lucia@lucia-VirtualBox:~$ sudo chage -l user
 ```
 
 ### Ejercicio 15
 15. Haga que la cuenta del usuario user2 expire el 1 de junio de 2023. Compruebe que se ha modificado
-
+```bash
+sudo chage -E 2026-07-01 user2
+```
 ### Ejercicio 16
 16. Borre el grupo practica8. ¿Qué ocurre?
-
+```bash
+sudo delgrpoup practica8
+```
 ### Ejercicio 17
+17. Instale el paquete quota.
+```bash
+h
+```
+### Ejercicio 18
+18. Visualice los dispositivos montados
+```bash
+l
+```
+
+### Ejercicio 19
+19. Modifique el archivo fstab para que permita cuotas de usuarios en /.Después de modificarlo, remonte el sistema de archivos con sudo mount -o remount /.
+```bash
+h
+```
 
 
+### Ejercicio 20
+20. Chequee el estado del sistema de cuotas
+```bash
+h
+```
+### Ejercicio 21
+21. Comprueba la existencia de aquota.user en el directorio /
+```bash
+h
+```
+### Ejercicio 22
+22. Active las cuotas de usuario
+```bash
+h
+```
+### Ejercicio 23
+23. Cree un nuevo usuario llamado user4
+```bash
+h
+```
+### Ejercicio 24
+24. Edite las cuotas del usuario user4, y ponga como limite blando de inodos 120, y como límite duro 150. Si no tiene instalado el editor joe, hágalo antes de editar las cuotas.
+```bash
+h
+```
+### Ejercicio 25
+25. Visualice las cuotas de todos los usuarios del sistema
+```bash
+h
+```
+
+### Ejercicio 26
+26. Establece el periodo de gracia general a 3 días, tanto para bloques como
+para inodos
+```bash
+h
+```
+
+### Ejercicio 27
+27. Asigne una contraseña al usuario user4 y acceda al sistema con dicho usuario.
+```bash
+h
+```
+### Ejercicio 28
+28. Compruebe las cuotas
+```bash
+h
+```
+### Ejercicio 29
+29. Pruebe a superar la cuota establecida para el usuario user4.
+```bash
+h
+```

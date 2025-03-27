@@ -137,6 +137,35 @@ sudo systemctl start ssh
 
 ### TAREAS PERIODICAS
 20. Haga que el servidor ssh se inicie en el arranque del sistema, asegurándose de que se actualicen los enlaces simbólicos necesarios
+systemctl status cron.service
+
+20. Cree un script llamado repetidor que se ejecute cada hora, y que haga que se añada una línea al fichero /home/user- apso/cadahora, con el mensaje “Ejecutado cron a las <fecha y hora>”
+```bash
+joe repetidor
+!/bin/sh
+date +"Ejecutando cron a las %H:%M" >>/home/apso/cadahora 
+lucia@lucia-VirtualBox:~$ chmod a+x repetidor
+```
+sudo systemctl restart cron 
+
+22. Instale la utilidad at\
+-> Tareas para futuro
+    
+24. Visualice la hora del sistema.
+    
+25. Haga que se añada una linea al fichero /home/user- apso/cadahora con el mensaje “linea generada por la orden at a las <fecha y hora>”, de forma automática 4 minutos después de la hora obtenida en el punto 22
+
+
+26. Copie el script creado en el punto o 20 a su directorio de usuario con el nombre programado.
+
+27. Programe una tarea para que el script programado se ejecute dentro de 15 minutos.
+
+28. Visualice las tareas programadas para la orden at.
+ 
+30. Elimine la tarea programada en el punto 25 Compruebe que ha sido
+eliminada.
+
+31. Programe un apagado del sistema para dentro de 3 minutos, informando a todos los usuarios con el mensaje “guardad y salid que esto se va a apagar”.
 
 
 

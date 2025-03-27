@@ -78,6 +78,7 @@ systemctl get-default
 
 ```
 
+### SERVICIOS
 10. Instale el servidor ssh
 ```bash
 lucia@lucia-VirtualBox:~$ sudo apt install ssh
@@ -89,24 +90,54 @@ Habilidados -> is-enable, enable, disable
 Enmascarado -> mask, unmask
 ```bash
 
+
+
 ```
 
-12. Determine el estado del servicio ssh
+12. Determine el estado del servicio ssh 
+```bash
 lucia@lucia-VirtualBox:~$ systemctl is-active ssh
 inactive
 lucia@lucia-VirtualBox:~$ systemctl status ssh
 Unit ssh.service could not be found.
+lucia@lucia-VirtualBox:~$ systemctl status ssh.service
+```
+13. Visualice el fichero /lib/systemd/system/ssh.service. ¿En que situación se reinicia el servidor ssh, según dicho fichero de configuración?
+ sudo systemctl start ssh
+ ssh apso@localhost
+Cada servicio tiene asociado un archivo de configutación, es un archivo .service
 
-14. Visualice el fichero /lib/systemd/system/ssh.service. ¿En que situación se reinicia el servidor ssh, según dicho fichero de configuración?
+15. Detenga el servidor de ssh.
+```bash
+sudo systemctl stop ssh.socket
+```
 
-16. Detenga el servidor de ssh.
 17. Deshabilite el servidor ssh.
-18. Enmascare el servidor ssh
-19. Determine el estado del servicio ssh
-20. Realice las acciones necesarias para que el servidor ssh esté activo,
-aunque no habilitado (no se inicie con el sistema).
-21. Haga que el servidor ssh se inicie en el arranque del sistema,
-asegurándose de que se actualicen los enlaces simbólicos
-necesarios
+```bash
+sudo systemctl stop ssh.socket
+sudo systemctl stop ssh
+sudo systemctl disable ssh
+sudo systemctl status ssh
+```
+
+16. Enmascare el servidor ssh
+```bash
+sudo systemctl mask ssh
+```
+18. Determine el estado del servicio ssh
+```bash
+sudo systemctl status ssh
+```
+
+19. Realice las acciones necesarias para que el servidor ssh esté activo, aunque no habilitado (no se inicie con el sistema).
+```bash
+sudo systemctl unmask ssh
+sudo systemctl start ssh
+```
+
+### TAREAS PERIODICAS
+20. Haga que el servidor ssh se inicie en el arranque del sistema, asegurándose de que se actualicen los enlaces simbólicos necesarios
+
+
 
 

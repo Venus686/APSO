@@ -1,15 +1,34 @@
 # CONTENIDO
-• /etc/default/grub
-• update-grub2
-• dmesg
-• systemctl
-• journalctl
-• pstree
-• cron
-• at
-• shutdown
+• /etc/default/grub\
+• update-grub2\
+• dmesg\
+• systemctl\
+• journalctl\
+• pstree\
+• cron\
+• at\
+• shutdown\
+- systemdl\
+- journalctl\
+- uname -a
+-lsb_release -a
 
-lucia@lucia-VirtualBox:~$ sudo cp /etc/default/grub /etc/default/grub.original \
+### EJERCICIO 1 2  3 y 4
+1. Copie el fichero /etc/default/grub al mismo directorio pero con
+el nombre grub_original
+
+2. Realice las siguientes modificaciones en el menú de arranque de
+Grub2:
+• Establezca el tiempo de elección del menú a 60 segundos\
+• Haga que no se muestren la opción de recovery mode en el menú.\
+• Establezca la resolución inicial a 800x600\
+• Haga que suene un pitido al aparecer el menú\
+• Haga que no aparezca memtest en el menú.
+
+3. Reinicie el sistema y compruebe que los cambios han tenido efecto.
+4. Si en lugar del pitido colocamos esta secuencia “410 668 1 668 1 0 1668 1 0 1 522 1 668 1 0 1 784 2 0 2 392 2”, ¿a qué os suena?
+```bash
+lucia@lucia-VirtualBox:-$ sudo cp /etc/default/grub /etc/default/grub.original \
 lucia@lucia-VirtualBox:~$ sudo joe /etc/default/grub \
 GRUB_TIMEOUT_STYLE=hidden -> a menu \
 GRUB_TIMEOUT=0 -> a 60 \
@@ -17,8 +36,77 @@ GRUB_TIMEOUT=0 -> a 60 \
 #GRUB_GFXMODE=640x480 -> 800x600 \
 
 /etc/grub.d \
-chmod a-x ./20_memtest86+ \
+chmod a-x ./20_memtest86+ 
 
 update-grub2 (basandose en los nucleos disponibles y en los ficheros que tengas)\
-Para saner si ha funcionado hay que arrancas de nuevo.\
+Para saber si ha funcionado hay que arrancas de nuevo.
+```
+### EJERCICIO 5
+5. Elimine del arranque la versión más antigua que tenga del kernel. Actualice grub y compruebe que ya no está disponible reiniciando el sistema (es posible que en caso de no haber ninguna versión anterior para eliminar tuviera que instalarlo siguiendo el procedimiento descrito en la documentación del tema).\
+5. Visualice los mensajes del kernel durante el arranque. Filtre aquellos mensajes que contienen la expresión EXT4.
+
+En mi caso tendría que eliminar vmlinuz-6.11.0-17-generic y todo lo que tuviese esa misma versión.\
+```bash
+lucia@lucia-VirtualBox:~$ sudo dmesg |more  
+lucia@lucia-VirtualBox:~$ sudo dmesg |grep EXT4
+[    3.601461] EXT4-fs (sda2): mounted filesystem 89f79d54-c75e-47bb-b528-188f9b2e2ddd ro with ordered data mode. Quota mode: none.
+[    4.289287] EXT4-fs (sda2): re-mounted 89f79d54-c75e-47bb-b528-188f9b2e2ddd r/w. Quota mode: none.
+```
+6. Visualice todos los servicios del sistema cuyo estado sea ‘activo’
+```bash
+man systemctl
+man journalctl
+pstree-> arbol de servicios o procesos del sistema
+pstree -p (ids)
+systemctl --list
+
+```
+7. Visualice los mensajes para el servicio NetworkManager en el
+registro de Systemd, que contengan la cadena Starting
+```bash
+lucia@lucia-VirtualBox:~$ systemctl list-units --type=servise --state=active
+lucia@lucia-VirtualBox:~$ journalctl -u NetworkManager
+lucia@lucia-VirtualBox:~$ journalctl -u NetworkManager | grep starting
+```
+
+8. Visualice el target establecido por defecto para aquellos servicios
+que no lo indiquen en su fichero de configuración.
+```bash
+man systemctl
+systemctl get-default
+
+
+```
+
+10. Instale el servidor ssh
+```bash
+lucia@lucia-VirtualBox:~$ sudo apt install ssh
+```
+11. Compruebe que el servidor ssh está activo, y esperando peticiones. Si no lo está, inicie el servicio. Haga una conexión a localhost de prueba y salga.
+ Los servicios pueden estar activos o inactivos y habilitados o deshabilitados y enmascarado(puede estar encendido pero no puedo encenderlo) o desenmascarado.\
+Activo -> is-active, start, stop, restart
+Habilidados -> is-enable, enable, disable
+Enmascarado -> mask, unmask
+```bash
+
+```
+
+12. Determine el estado del servicio ssh
+lucia@lucia-VirtualBox:~$ systemctl is-active ssh
+inactive
+lucia@lucia-VirtualBox:~$ systemctl status ssh
+Unit ssh.service could not be found.
+
+14. Visualice el fichero /lib/systemd/system/ssh.service. ¿En que situación se reinicia el servidor ssh, según dicho fichero de configuración?
+
+16. Detenga el servidor de ssh.
+17. Deshabilite el servidor ssh.
+18. Enmascare el servidor ssh
+19. Determine el estado del servicio ssh
+20. Realice las acciones necesarias para que el servidor ssh esté activo,
+aunque no habilitado (no se inicie con el sistema).
+21. Haga que el servidor ssh se inicie en el arranque del sistema,
+asegurándose de que se actualicen los enlaces simbólicos
+necesarios
+
 

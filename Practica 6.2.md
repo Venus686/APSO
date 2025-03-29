@@ -23,6 +23,22 @@ En el directorio **Practica6**, cree un script llamado **miron** que tome un ún
 - Si es un **fichero ordinario**, mostrará su contenido con `more`.
 - Si no es ninguno de los anteriores, mostrará un mensaje de error con el valor del parámetro.
 ```bash
+#!/bin/bash
+if [ $# -ne 1 ];then
+        echo "Error, se necesita al menos un parametro"
+        exit 10
+fi
+if [ -d $1 ];then
+        ls -la $1 2>dev/null
+elsif [ -L $1 ; then
+        echo "Enlace simbólico a: $1"
+        cat $1
+elsif [ -f $1 ];then
+        more $1
+else
+        echo "ERROR $1"
+        exit 11
+fi
 
 ```
 
@@ -34,12 +50,31 @@ Cree un script llamado **nprimeros.sh** que tome dos parámetros:
   **"El nombre del fichero i es <<nombre del fichero>>"**  
   donde `i` representa el orden del fichero en el listado.  
 ```bash
+#!/bin/bash
+i=1
+n=$2
+if [ ! -d $1 ];then
+        echo "Error"
+        exit 10
+else
+        for j in $(find $1 -maxdepth 1 -type f -printf "%f\n")
+        do
+                if [ $i -gt $n ];then
+                        break
+
+                fi
+                echo "El nombre del fichero $1 es $j"
+
+                i=$(expr $i + 1)
+        done
+fi
+
 ```
 
 ### Ejercicio 5
 Cree los directorios **largos** y **cortos** dentro de **Practica6**.
 ```bash
-
+lucia.zamudio@polifemo:~/ModuloI/Practica6$ mkdir largos cortos
 ```
 
 ### Ejercicio 6
@@ -51,7 +86,24 @@ Cree un script llamado **selector.sh** que tome una secuencia de parámetros.
   - Se debe usar un `case` dentro de un bucle `for`.
   - Analizar el comportamiento con enlaces simbólicos a ficheros de texto.
 ```bash
+#!/bin/bash
+for i in $*
+do
+        if [ -f ~/$1 ]; then
+                echo "$i es un fichero"
+                case $i in
 
+                        ??????*) cp ~/$1 largos;;
+                        *) cp ~/$1 cortos;;
+
+                esac
+        fi
+done
+
+lucia.zamudio@polifemo:~/ModuloI/Practica6$ ./selector.sh solucion2
+solucion2 es un fichero
+lucia.zamudio@polifemo:~/ModuloI/Practica6$ ls ./largos/
+solucion2
 ```
 
 ### Ejercicio 7

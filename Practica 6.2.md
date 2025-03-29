@@ -4,13 +4,15 @@
 Muestre por pantalla el texto:  
 **"Practica 6: Scripts (Estructuras de Control) – Inicio…"**
 ```bash
-
+lucia.zamudio@polifemo:~$ echo  "Inicio…"
+Inicio…
 ```
 
 ### Ejercicio 2
 Cree un directorio llamado **Practica6** dentro de **ModuloI** y sitúese en él.
 ```bash
-
+lucia.zamudio@polifemo:~$ mkdir ./ModuloI/Practica6
+lucia.zamudio@polifemo:~$ cd ./ModuloI/Practica6
 ```
 
 ### Ejercicio 3

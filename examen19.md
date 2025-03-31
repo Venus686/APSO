@@ -73,7 +73,7 @@
 ## EJERCICIO 9
 9) (1,25 puntos) Cree un guión, en el directorio Guiones, llamado Creador que tome un parámetro  y realice los siguiente:\
 • Si el parámetro es una ruta a un directorio válido\
-  ◦ Crea en dicho directorio un enlace simbólico llamado home que apunte a su directorio de usuario.\
+  ◦ Crea en dicho directorio un enlace simbólico llamado home que apunte a su directorio de usuario.\    
  ◦ Crea una variable llamada RESULTADO que contenga la palabra LINK\
 • En caso contrario,\
  ◦ Solicita por teclado un código de error\

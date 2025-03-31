@@ -1,7 +1,19 @@
 # EJERCICIOS PARA PRACTICAR
 ## INFO UTIL
 %R     hora y minuto en el sistema horario de 24 horas; igual que %H:%M\
-%A     nombre del día de la semana localizado completo (p.ej. Domingo)
+%A     nombre del día de la semana localizado completo (p.ej. Domingo)\
+ctime -> cambia el estatus de un archivo, como los permisos, el cambio de propietario etc.\
+mtime -> cuando se ha modificado por ejemplo el contenido de un fichero.\
+Si uso &> redirecciona tanto la salida estándar como los errores a un archivo\
+comando &	Ejecuta el comando en segundo plano.\
+comando > archivo	Redirige solo la salida estándar a archivo.\
+comando 2> archivo	Redirige solo los errores a archivo.\
+comando &> archivo	Redirige salida y errores a archivo.\
+comando &> archivo &	Redirige salida y errores a archivo, y lo ejecuta en segundo plano.\
+1	stdout (salida estándar)	Redirige la salida estándar\
+2	stderr (errores)	Redirige los errores\
+/dev/null	Descartar	Descartar la salida (tirarla a la "basura")
+
 ## EJERCICIO 1
 (0,5 puntos)
  • Usando rutas relativas y con una sola orden cree la siguiente estructura de directorios:\
@@ -52,7 +64,7 @@ Bienvenido a polifemo, son las 18:34 del lunes
  • Genere un fichero en el directorio Resultados, llamado enlacesUSR que contenga la lista de enlaces simbólicos que cuelgan a partir del directorio /usr, que tienen exactamente dos caracteres en su nombre, y cuyo “estatus” haya cambiado hace más de 60 días. Los posibles  mensajes de error también deben aparecer en el fichero generado.\
  • Sin editar el fichero, añada al fichero generado anteriormente, una línea con su identificador de usuario y grupo y los grupos a los que pertenece.
  ```bash
-
+lucia.zamudio@polifemo:~$ find /usr -type l -name "??" -ctime +60 &>ExS1/guiones/resultados/enlacesUSR
 ```
 
 ## EJERCICIO 5

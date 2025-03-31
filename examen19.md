@@ -35,6 +35,17 @@ comando &> archivo &	Redirige salida y errores a archivo, y lo ejecuta en segund
        -u, --user
               muestra solo el ID efectivo del usuario
 
+### EXIT
+exit 10 → Termina el script y devuelve el código de salida 10.
+
+exit 11 → Termina el script y devuelve el código de salida 11.
+
+exit 0 → Indica una terminación exitosa (convención en Linux).
+
+exit 1 → Indica un error genérico.
+![Captura de pantalla 2025-03-31 194157](https://github.com/user-attachments/assets/53bf6e59-9401-4824-ae81-f22be849984c)
+
+
 ## EJERCICIO 1
 (0,5 puntos)
  • Usando rutas relativas y con una sola orden cree la siguiente estructura de directorios:\
@@ -162,5 +173,6 @@ examples.desktop  home  passwd   prac2  prac4  prac6  solucion2
  Al finalizar deberá mostrar el número de ficheros que cumplen la condición.\
  Ejecute el guión pasándole como parámetros las rutas a los directorios Info y /home/.
 ```bash
+
 
 ```

@@ -173,6 +173,25 @@ examples.desktop  home  passwd   prac2  prac4  prac6  solucion2
  Al finalizar deberá mostrar el número de ficheros que cumplen la condición.\
  Ejecute el guión pasándole como parámetros las rutas a los directorios Info y /home/.
 ```bash
+#!/bin/bash
+if [ $# -ne 2 ];then
+        echo Se deben de pasar 2 parametros
+        exit -1
+fi
 
-
+if [ ! -d $1 ] || [ ! -d $2 ];then
+        echo Ambos parámetros deben ser válidos
+else
+        contador=0
+        for i in $1/*; do
+                if [ $i -nt $2 ];then
+                        echo "El fichero $1/$i es mas reciente que $2" >>/home/lucia.zamudio/ExS1/guio
+                        contador=$(($contador+1))
+                fi
+        done
+        echo Se ha añadido un total de $contador ficheros
+fi
+lucia.zamudio@polifemo:~$ chmod a+x /home/lucia.zamudio/ExS1/guiones/nuevos
+lucia.zamudio@polifemo:~$ /home/lucia.zamudio/ExS1/guiones/nuevos $HOME/ExS1/Info/ /home/lucia.zamudio/prac6
+Se ha añadido un total de 39 ficheros
 ```

@@ -1,6 +1,6 @@
 # EJERCICIOS PARA PRACTICAR
 ## INFO UTIL
-%R     hora y minuto en el sistema horario de 24 horas; igual que %H:%M
+%R     hora y minuto en el sistema horario de 24 horas; igual que %H:%M\
 %A     nombre del día de la semana localizado completo (p.ej. Domingo)
 ## EJERCICIO 1
 (0,5 puntos)

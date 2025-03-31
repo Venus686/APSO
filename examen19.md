@@ -34,7 +34,14 @@ lucia.zamudio@polifemo:~$ rm -r ExS1/Info/Temporal/
  b. Exista un alias llamado espacio que devuelva el espacio de disco disponible, expresado en Megabytes.\
  c. Muestre un mensaje de bienvenida, que incluya la hora y el día de la semana. Por ejemplo: “Bienvenido a Polifemo, son las hora:minutos del lunes”
  ```bash
-
+joe .profile
+PATH=$PATH:. -> los : son para que se separen los directorios, si no daría error
+df->  df mostrará el espacio disponible en ese sistema de
+       archivos en lugar de en el sistema de archivos que contiene el  nodo  de  dispositivo
+alias espacio="df -m"
+date +"Bienvenido a polifemo, son las %R del %A"
+lucia.zamudio@polifemo:~$ . .profile
+Bienvenido a polifemo, son las 18:34 del lunes
 ```
 
 ## EJERCICIO 4

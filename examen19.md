@@ -22,7 +22,9 @@ También se puede como chmod -R go -rwx ../..
  ```bash
 lucia.zamudio@polifemo:~/ExS1/Info/Temporal$ cp /home/so/ficheros/[cC]* ../
 lucia.zamudio@polifemo:~/ExS1/Info/Temporal$ cp ../*.????* ./
-
+lucia.zamudio@polifemo:~/ExS1/Info/Temporal$ cp ../?? ../../guiones/resultados/
+lucia.zamudio@polifemo:~/ExS1/Info/Temporal$ cd
+lucia.zamudio@polifemo:~$ rm -r ExS1/Info/Temporal/
 ```
 
 ## EJERCICIO 3

@@ -1,9 +1,13 @@
 # EJERCICIOS PARA PRACTICAR
 ## INFO UTIL
+### DATE
 %R     hora y minuto en el sistema horario de 24 horas; igual que %H:%M\
-%A     nombre del día de la semana localizado completo (p.ej. Domingo)\
+%A     nombre del día de la semana localizado completo (p.ej. Domingo
+
 ctime -> cambia el estatus de un archivo, como los permisos, el cambio de propietario etc.\
 mtime -> cuando se ha modificado por ejemplo el contenido de un fichero.\
+
+### REDIRECCIONAMIENTO
 Si uso &> redirecciona tanto la salida estándar como los errores a un archivo\
 comando &	Ejecuta el comando en segundo plano.\
 comando > archivo	Redirige solo la salida estándar a archivo.\
@@ -13,6 +17,23 @@ comando &> archivo &	Redirige salida y errores a archivo, y lo ejecuta en segund
 1	stdout (salida estándar)	Redirige la salida estándar\
 2	stderr (errores)	Redirige los errores\
 /dev/null	Descartar	Descartar la salida (tirarla a la "basura")
+
+### COMANDO ID
+
+       -g, --group
+              muestra solo el ID de grupo
+
+       -G, --groups
+              muestra todos ID de grupo
+
+       -n, --name
+              muestra un nombre en lugar de un número, para -ugG
+
+       -r, --real
+              muestra el ID real en lugar del ID efectivo, para -ugG
+
+       -u, --user
+              muestra solo el ID efectivo del usuario
 
 ## EJERCICIO 1
 (0,5 puntos)
@@ -65,6 +86,7 @@ Bienvenido a polifemo, son las 18:34 del lunes
  • Sin editar el fichero, añada al fichero generado anteriormente, una línea con su identificador de usuario y grupo y los grupos a los que pertenece.
  ```bash
 lucia.zamudio@polifemo:~$ find /usr -type l -name "??" -ctime +60 &>ExS1/guiones/resultados/enlacesUSR
+
 ```
 
 ## EJERCICIO 5

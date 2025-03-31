@@ -2,6 +2,8 @@
 ## EJERCICIO 1
 (0,5 puntos)
  • Usando rutas relativas y con una sola orden cree la siguiente estructura de directorios:\
+![Captura de pantalla 2025-03-31 161729](https://github.com/user-attachments/assets/537b3f00-5bde-4bcb-bc5c-e43f8990af76)
+
  • Muévase al directorio Temporal usando una ruta absoluta.\
  • Quite a todos los directorios creados, todos los permisos a los miembros del grupo y al resto de usuarios del sistema. Los permisos del propietario no deben cambiar. Use rutas relativas.
  ```bash

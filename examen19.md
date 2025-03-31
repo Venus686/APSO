@@ -134,6 +134,7 @@ lucia.zamudio@polifemo:~$ grep include $(find /usr  -type f -name "w*.c") | wc -
  ◦ Crea una variable llamada RESULTADO que contenga el código de error introducido.\
  Ejecute el guión, pasándole como parámetro ~/ExamenS1/Guiones/Resultados/ y de forma que la variable NUEVOS esté disponible cuando el guión finalice.
 ```bash
+
 #!/bin/bash
 
 if [ -d $1 ];then
@@ -143,7 +144,14 @@ else
         echo Introduce un codigo de error
         read RESULTADO
 fi
-
+lucia.zamudio@polifemo:~$ joe ExS1/guiones/Creador
+lucia.zamudio@polifemo:~$ chmod a+x /home/lucia.zamudio/ExS1/guiones/Creador
+lucia.zamudio@polifemo:~$ ls -l /home/lucia.zamudio/ExS1/guiones/Creador
+-rwxr-xr-x 1 lucia.zamudio users 127 mar 31 19:50 /home/lucia.zamudio/ExS1/guiones/Creador
+lucia.zamudio@polifemo:~$ /home/lucia.zamudio/ExS1/guiones/Creador ~/ExS1/guiones/resultados/
+lucia.zamudio@polifemo:~$ ls
+DEADJOE           ExS1  ModuloI  prac1  prac3  prac5  replica.sh  solucion2~
+examples.desktop  home  passwd   prac2  prac4  prac6  solucion2
 ```
 
 ## EJERCICIO 10

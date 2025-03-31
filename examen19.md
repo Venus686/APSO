@@ -5,7 +5,7 @@
 %A     nombre del día de la semana localizado completo (p.ej. Domingo
 
 ctime -> cambia el estatus de un archivo, como los permisos, el cambio de propietario etc.\
-mtime -> cuando se ha modificado por ejemplo el contenido de un fichero.\
+mtime -> cuando se ha modificado por ejemplo el contenido de un fichero.
 
 ### REDIRECCIONAMIENTO
 Si uso &> redirecciona tanto la salida estándar como los errores a un archivo\
@@ -95,13 +95,15 @@ lucia.zamudio@polifemo:~$ id >> ExS1/guiones/resultados/enlacesUSR
  • Visualice, el número (sólo el número) de instancias del proceso bash que están siendo ejecutadas en este instante por el usuario "pedro".\
  • Visualice, ordenadas alfabéticamente, las líneas de todos los usuarios conectados, que contengan la cadena “172.17.”\
  ```bash
-
+lucia.zamudio@polifemo:~$ ps -u pedro | grep bash |wc -l
+0
+lucia.zamudio@polifemo:~$ who | sort | grep 172.17
 ```
 ## EJERCICIO 6
  (1 punto)
  • Con una sola orden, cuente las líneas que contengan la cadena include, de todos los ficheros que cuelguen a partir del directorio /usr y cuyo nombre comience por  “w” y finalice en “.c”
  ```bash
-
+lucia.zamudio@polifemo:~$ grep include $(find /usr  -type f -name "w*.c") | wc -l
 ```
 
 ## EJERCICIO 7

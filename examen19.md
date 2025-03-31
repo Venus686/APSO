@@ -134,6 +134,15 @@ lucia.zamudio@polifemo:~$ grep include $(find /usr  -type f -name "w*.c") | wc -
  ◦ Crea una variable llamada RESULTADO que contenga el código de error introducido.\
  Ejecute el guión, pasándole como parámetro ~/ExamenS1/Guiones/Resultados/ y de forma que la variable NUEVOS esté disponible cuando el guión finalice.
 ```bash
+#!/bin/bash
+
+if [ -d $1 ];then
+        ln -s $1/home $HOME
+        RESULTADO=LINK
+else
+        echo Introduce un codigo de error
+        read RESULTADO
+fi
 
 ```
 
@@ -144,3 +153,6 @@ lucia.zamudio@polifemo:~$ grep include $(find /usr  -type f -name "w*.c") | wc -
  • Para cada fichero, o directorio, que exista en el directorio pasado como primer parámetro (en dicho directorio, no en sus subdirectorios), que sea más nuevo que el directorio pasado como segundo parámetro, deberá añadir una línea con el mensaje “El fichero <ruta al fichero> es más reciente que <ruta al directorio>”, en un fichero llamado recientes dentro del directorio Resultados.\
  Al finalizar deberá mostrar el número de ficheros que cumplen la condición.\
  Ejecute el guión pasándole como parámetros las rutas a los directorios Info y /home/.
+```bash
+
+```

@@ -86,6 +86,7 @@ Bienvenido a polifemo, son las 18:34 del lunes
  • Sin editar el fichero, añada al fichero generado anteriormente, una línea con su identificador de usuario y grupo y los grupos a los que pertenece.
  ```bash
 lucia.zamudio@polifemo:~$ find /usr -type l -name "??" -ctime +60 &>ExS1/guiones/resultados/enlacesUSR
+lucia.zamudio@polifemo:~$ id >> ExS1/guiones/resultados/enlacesUSR
 
 ```
 

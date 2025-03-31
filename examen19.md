@@ -7,7 +7,10 @@
  • Muévase al directorio Temporal usando una ruta absoluta.\
  • Quite a todos los directorios creados, todos los permisos a los miembros del grupo y al resto de usuarios del sistema. Los permisos del propietario no deben cambiar. Use rutas relativas.
  ```bash
-
+lucia.zamudio@polifemo:~$ mkdir -p ExS1/guiones/resultados ExS1/Info/Temporal
+lucia.zamudio@polifemo:~$ cd /home/lucia.zamudio/ExS1/Info/Temporal/
+lucia.zamudio@polifemo:~/ExS1/Info/Temporal$ chmod -R 700 ../..
+También se puede como chmod -R go -rwx ../.. 
 ```
 ## EJERCICIO 2
  (0,75 puntos) – NO SE PUEDE USAR LA ORDEN find
@@ -17,6 +20,8 @@
  • Muévase a su directorio de usuario con la orden mas simple posible.\
  • Dé las ordenes necesarias para eliminar el directorio Temporal, incluyendo su contenido.
  ```bash
+lucia.zamudio@polifemo:~/ExS1/Info/Temporal$ cp /home/so/ficheros/[cC]* ../
+lucia.zamudio@polifemo:~/ExS1/Info/Temporal$ cp ../*.????* ./
 
 ```
 

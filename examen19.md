@@ -1,4 +1,5 @@
-# EJERCICIOS PARA PRACTICAR
+# EJERCICIOS PARA 
+
 ## EJERCICIO 1
 (0,5 puntos)
  • Usando rutas relativas y con una sola orden cree la siguiente estructura de directorios:\

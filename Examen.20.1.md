@@ -11,6 +11,17 @@ usuario@pc..$ssh lucia...@172.17.21.248\
 polifemo login:
 CTRL + ALT + F4\
 y ademas no tienes que matar el entorno gráfico más
+
+
+fichero1 -nt fichero2 Verdad si fichero1 es más reciente (según la fecha de modificación) que fichero2.\
+fichero1 -ot fichero2 Verdad si fichero1 es más antiguo que fichero\
+-eq	Igual a (equal)	5 -eq 5 → Verdadero\
+-ne	No igual a (not equal)	5 -ne 10 → Verdadero\
+-gt	Mayor que (greater than)	10 -gt 5 → Verdadero\
+-lt	Menor que (less than)	5 -lt 10 → Verdadero\
+-ge	Mayor o igual que (greater or equal)	10 -ge 5 → Verdadero\
+-le	Menor o igual que (less or equal)	5 -le 10 → Verdadero
+
 ## EJERCICIO 1
  1) Cambie el passwd de su cuenta.
  ```bash

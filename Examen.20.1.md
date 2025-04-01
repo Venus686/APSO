@@ -73,12 +73,19 @@ lucia.zamudio@polifemo:~$ find /usr -name "*head*" -type l -mtime +10 -size +30w
 ## EJERCICIO 10
 10) 0,25 puntos Añada al final del fichero elfind, creado en el punto anterior, la hora actual.
 ```bash
-
+lucia.zamudio@polifemo:~$ date +"La hora actual es %R" >>ExS2/ficheros/elfin
+d
+lucia.zamudio@polifemo:~$ cat ExS2/ficheros/elfind
+fichero: /usr/src/linux-headers-4.15.0-213-generic/scripts/selinux/genheaders
+fichero: /usr/src/linux-headers-4.15.0-212-generic/scripts/selinux/genheaders
+La hora actual es 11:30
 ```
 ## EJERCICIO 11
  11) 0,25 puntos Cree un enlace simbólico en el directorio temporal llamado noacces que apunte al fichero errorfind, creado en el punto 9.
 ```bash
-
+lucia.zamudio@polifemo:~$ ln -s ExS2/ficheros/errorfind ExS2/guiones/temporal/noacces
+lucia.zamudio@polifemo:~$ ls -l ExS2/guiones/temporal/noacces
+lrwxrwxrwx 1 lucia.zamudio users 23 abr  1 11:36 ExS2/guiones/temporal/noacces -> ExS2/ficheros/errorfind
 ```
 ## EJERCICIO 12
 12) 0,5 puntos. Visualice en orden inverso, todos los usuarios conectados al sistema cuyo nombre contenga la cadena va. La salida debe quedar en un fichero llamado p12.txt en el directorio ficheros.

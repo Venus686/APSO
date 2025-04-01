@@ -1,16 +1,26 @@
 # EJERCICIOS PARA PRACTICAR
 ## INFO UTIL
-
+Si se rompe el path
+/usr/bin
+EXAMEN
+CTRL + ALT+ F3
+Login: usuario
+password: usuario00
+usuario@pc...$killall gnome-shell
+usuario@pc..$ssh lucia...@172.17.21.248
+polifemo login:
+CTRL + ALT + F4
+y ademas no tienes que matar el entorno gráfico más
 ## EJERCICIO 1
  1) Cambie el passwd de su cuenta.
  ```bash
-
+passwd  
 ```
 ## EJERCICIO 2
   2) 0,25 puntos Cree la siguiente estructura de directorios en su cuenta de usuario:
      ![Captura de pantalla 2025-03-31 203445](https://github.com/user-attachments/assets/25538b49-5cf5-41ce-9df2-b19241144bee)w
  ```bash
-
+lucia.zamudio@polifemo:~$ mkdir -p ExS2/ficheros/trash ExS2/guiones/temporal
 ```
 
 ## EJERCICIO 3

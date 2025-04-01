@@ -124,7 +124,12 @@ lucia.zamudio@polifemo:~$ grep include $(find /usr  -type f -name "w*.c") | wc -
  • Programe una tarea con la orden at para que se ejecute a las 12:35 horas, que quite todos los permisos del directorio  ExamenS1.\
  • En su directorio de usuario, cree un fichero llamado examen.tgz que contenga el contenido comprimido de todo lo que contiene el directorio ExamenS1
  ```bash
-
+sudo -get dowloand jed
+sudo apt install jed
+apt-cache search tritium
+at 12:35
+       chmod 000 /home/lucia.zamudio/ExS1
+tar cvfz examen.tgz ExS1
 ```
 ## EJERCICIO 8
 8)  (0,5 puntos)
@@ -132,7 +137,27 @@ lucia.zamudio@polifemo:~$ grep include $(find /usr  -type f -name "w*.c") | wc -
  • Indique si en Polifemo está activa la opción para que cada usuario creado pertenezca a un grupo con su nombre. En caso de que no sea así, ¿qué grupo se asigna?. Explique cómo ha obtenido la información.\
  • Visualice sus cuotas de disco, en formato “human-readable”.
 ```bash
+Para eliminar un kernel borramos los archivos correspondientes de la carpeta /boot. Si queremos
+quedarnos con una copia de seguridad, podemos mover los archivos de ese kernel de la
+carpeta /boot a una carpeta creada por nosotros. Primero creamos la carpeta:
+sudo mkdir /boot/kernels
+A continuación movemos la imagen del kernel (debemos cambiar 4.18.0-15 por el kernel que
+queramos eliminar del menú):
+sudo mv /boot/vmlinuz-4.18.0-15-generic /boot/kernels/
+Y tambien podemos mover la imagen de que se utiliza para entrar en el modo recuperación
+(debemos cambiar 4.18.0-15 por el kernel que queramos eliminar del menú):
+sudo mv /boot/initrd.img-4.18.0-15-generic /boot/kernels/
+Despues actualizamos grub.cfg:
+sudo update-grub2
+Con esto, conseguiremos que durante el arranque estén disponibles únicamente aquellos kernels que
+se encuentren en el directorio /boot.
 
+
+cat /etc/adduser.conf | grep GROUP
+# EXTRA_GROUPS: This is a list of groups which users should be added to by default.
+EXTRA_GROUPS=""
+
+repquota -h
 ```
 
 ## EJERCICIO 9

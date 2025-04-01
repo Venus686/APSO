@@ -51,7 +51,7 @@ passwd
 ```
 ## EJERCICIO 2
   2) 0,25 puntos Cree la siguiente estructura de directorios en su cuenta de usuario:
-     ![Captura de pantalla 2025-03-31 203445](https://github.com/user-attachments/assets/25538b49-5cf5-41ce-9df2-b19241144bee)w
+     ![Captura de pantalla 2025-03-31 203445](https://github.com/user-attachments/assets/25538b49-5cf5-41ce-9df2-b19241144bee)
  ```bash
 lucia.zamudio@polifemo:~$ mkdir -p ExS2/ficheros/trash ExS2/guiones/temporal
 ```

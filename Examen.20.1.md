@@ -34,33 +34,40 @@ lucia.zamudio@polifemo:~$ chmod 754 ExS2/ficheros
 ## EJERCICIO 4
 4) 0,25 puntos Copie todos los ficheros de /home/so/ficheros cuyo nombre contenga un número en la tercera posición de su nombre al directorio ficheros
  ```bash
-
+lucia.zamudio@polifemo:~$ cp /home/so/ficheros/??[0-9]* ExS2/ficheros/
 ```
 
 ## EJERCICIO 5
   5) 0,25 puntos Mueva aquellos ficheros del directorio ficheros cuyo nombre finalice en bak al directorio trash
 ```
-
+lucia.zamudio@polifemo:~$ mv ExS2/ficheros/*bak ExS2/ficheros/trash/
 ```
 ## EJERCICIO 6
  6) 0,25 puntos Borre el directorio trash
-    
+```bash
+lucia.zamudio@polifemo:~$ rm -r ExS2/ficheros/trash/
+```
 
 ## EJERCICIO 7
  7) 0,25 puntos Haga que la ruta al directorio de trabajo esté siempre disponible en el PATH al acceder al sistema.
  ```bash
-
+PATH=:.
 ```
 ## EJERCICIO 8
  8) 0,25 puntos Haga que cada vez que se acceda al sistema se cree una variable llamada GUIONES que contenga la ruta absoluta al directorio guiones
 ```bash
-
+GUION=/home/lucia.zamudio/ExS2/guiones
+export GUION
+lucia.zamudio@polifemo:~$ echo $GUION
+/home/lucia.zamudio/ExS2/guiones
 ```
 
 ## EJERCICIO 9
  9) 0,5 puntos Encuentre todos los enlaces simbólicos que existan a partir del directorio /usr, cuyo nombre contenga la cadena head, que hayan sido modificados hace más de 10 días y cuyo tamaño sea superior a 30 palabras (de 2 bytes).  Por cada fichero  encontrado debe visualizarse una linea con el contenido “Fichero: “ seguido de la ruta al fichero. La salida de dicha orden debe almacenarse en un fichero llamado elfind  y la salida de errores en otro llama errorfind, ambos en el directorio ficheros.
 ```bash
-
+ -size n
+ `w'    for two-byte words
+lucia.zamudio@polifemo:~$ find /usr -name "*head*" -type l -mtime +10 -size +30w -printf "fichero: %h\n" >ExS2/ficheros/elfind 2>ExS2/ficheros/errorfind
 ```
 
 ## EJERCICIO 10

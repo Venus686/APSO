@@ -44,6 +44,20 @@ x -ge y Verdad si x mayor o igual que y\
 x -gt y Verdad si x mayor que y\
 x -ne y Verdad si x no igual que y
 
+
+repquota:
+Propósito: Muestra un informe sobre el uso actual de cuotas de disco.
+
+Cuándo se usa: Se utiliza cuando deseas ver el estado actual de las cuotas de disco para los usuarios o grupos en el sistema. Muestra información sobre el uso de espacio en disco y las cuotas asignadas.
+
+Función: Muestra las cuotas actuales y el uso de disco en los sistemas de archivos donde las cuotas están habilitadas. Puede mostrarte las cuotas asignadas, el uso de disco de cada usuario y si se han superado las cuotas.
+
+Propósito: Realiza una comprobación y corrección de las cuotas de disco en los sistemas de archivos.
+
+Cuándo se usa: Se utiliza para verificar y corregir la base de datos de cuotas, en caso de que se haya dañado o si se ha añadido o modificado un sistema de archivos con cuotas habilitadas. Esto también es necesario después de reiniciar el sistema o montar un sistema de archivos que tenga cuotas activadas.
+
+Función: quotacheck escanea el sistema de archivos y crea o actualiza los archivos de cuotas (aquota.user y aquota.group) que contienen la información sobre las cuotas de usuario y grupo. Si los archivos de cuotas están dañados o no se han actualizado, quotacheck puede corregir estos archivos.
+
 ## EJERCICIO 1
  1) Cambie el passwd de su cuenta.
  ```bash
@@ -146,16 +160,35 @@ lucia.zamudio@polifemo:~$ rm -r ~/*0
  15) 0,33 puntos Busque en la cache de paquetes del sistema, aquellos relacionados con sgb.
  Haga que la salida quede en un fichero llamado paquetes.txt en el directorio ficheros.
 ```bash
+lucia.zamudio@polifemo:~$ apt-cache search sgb > /home/lucia.zamudio/ExS2/fi
+cheros/paquetes.txt
+lucia.zamudio@polifemo:~$ cat /home/lucia.zamudio/ExS2/ficheros/paquetes.txt
+libbatteries-ocaml-dev - Batteries included: OCaml development platform - development files
+libgeo-coordinates-osgb-perl - converting module between Lat/Lon and the British National Grid
+python-dialog - Python 2 module for making simple terminal-based user interfaces
+python3-dialog - Python module for making simple terminal-based user interfaces
+sgb - The Stanford GraphBase: datos combinatorios y algoritmos
+sgb-doc - Documentación para Stanford GraphBase
 
+
+-------------------------------------------
+lucia.zamudio@polifemo:~$ dpkg -l | grep sgb >> /home/lucia.zamudio/ExS2/ficheros/paquetes.txt
 ```
 ## EJERCICIO 16
 16) 0,25 puntos Visualice la situación actual de sus cuotas de disco. La salida debe quedar en un fichero llamado ocupacion.txt en el directorio ficheros.
 ```bash
+repquota -a: Muestra las cuotas de disco de todos los sistemas de archivos habilitados con cuotas (se debe haber configurado previamente las cuotas de disco).
+
+-a: Muestra la información de todas las particiones que tengan cuotas habilitadas.
 
 ```
 ## EJERCICIO 17
 17) 0,34 puntos Visualice el estado del servicio webmin.service. Haga que la salida quede en un fichero llamado estado.txt en el directorio ficheros.
 ```bash
+lucia.zamudio@polifemo:~$ sudo repquota -a > /home/lucia.zamudio/ExS2/ficher
+os/extado.txt
+[sudo] password for lucia.zamudio:
+lucia.zamudio is not in the sudoers file.  This incident will be reported.
 
 ```
 ## EJERCICIO 18

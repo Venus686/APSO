@@ -1,15 +1,15 @@
 # EJERCICIOS PARA PRACTICAR
 ## INFO UTIL
 Si se rompe el path
-/usr/bin
-EXAMEN
-CTRL + ALT+ F3
-Login: usuario
-password: usuario00
-usuario@pc...$killall gnome-shell
-usuario@pc..$ssh lucia...@172.17.21.248
+/usr/bin\
+EXAMEN\
+CTRL + ALT+ F3\
+Login: usuario\
+password: usuario00\
+usuario@pc...$killall gnome-shell -> no hacerlo\ 
+usuario@pc..$ssh lucia...@172.17.21.248\
 polifemo login:
-CTRL + ALT + F4
+CTRL + ALT + F4\
 y ademas no tienes que matar el entorno gráfico más
 ## EJERCICIO 1
  1) Cambie el passwd de su cuenta.
@@ -25,9 +25,10 @@ lucia.zamudio@polifemo:~$ mkdir -p ExS2/ficheros/trash ExS2/guiones/temporal
 
 ## EJERCICIO 3
  3) 0,25 puntos Modifique los permisos del directorio pruebaL1 para que los miembros del grupo y el resto de usuarios no tengan ningún permiso. 
-Haga que el directorio ficheros tenga como permisos rwxr-xr-
+Haga que el directorio ficheros tenga como permisos rwxr-xr--
  ```bash
-
+lucia.zamudio@polifemo:~$ chmod 700 ExS2
+lucia.zamudio@polifemo:~$ chmod 754 ExS2/ficheros
 ```
 
 ## EJERCICIO 4

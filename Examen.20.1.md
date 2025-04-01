@@ -201,5 +201,30 @@ alias minombre='echo lucia.zamudio > /home/lucia.zamudio/ExS2/ficheros//pet/estu
  ◦ en cualquier otro caso, se resta 1 a la variable TOTAL\
  • Visualiza un mensaje con el contenido de la variable TOTAL\
 ```bash
+#!/bin/bash
+if [ $# -ne 2 ];then
+        echo "Se necesitan 2 parámetros."
+        exit 10
+fi
 
+if [ ! -d $1 ];then
+        echo "El parámetro no es válido."
+        exit 10
+fi
+
+TOTAL=0
+for i in $(find $1 -type f)
+do
+        if  echo "$i" grep "$2" ;then
+                cat $i
+        elif [ echo "$i" grep *f??* ];then
+
+                TOTAL=$(expr $TOTAL + 1)
+        elif [ echo "$i" grep *[0-9] ];then
+                TOTAL=$(expr $TOTAL + 1)
+        else
+                TOTAL=$(expr $TOTAL - 1)
+        fi
+done
+echo "$TOTAL"
 ```

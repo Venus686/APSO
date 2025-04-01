@@ -20,7 +20,29 @@ fichero1 -ot fichero2 Verdad si fichero1 es más antiguo que fichero\
 -gt	Mayor que (greater than)	10 -gt 5 → Verdadero\
 -lt	Menor que (less than)	5 -lt 10 → Verdadero\
 -ge	Mayor o igual que (greater or equal)	10 -ge 5 → Verdadero\
--le	Menor o igual que (less or equal)	5 -le 10 → Verdadero
+-le	Menor o igual que (less or equal)	5 -le 10 → Verdadero\
+Números:
+
+-eq, -ne, -gt, -lt, -ge, -le (para comparar números)
+
+Cadenas:
+
+=, !=, <, >, -z, -n (para comparar cadenas)
+
+Archivos:
+
+-e, -f, -d, -r, -w, -x, -s, -L (para trabajar con archivos y directorios)
+
+Lógica:
+
+!, -o, -a (operadores lógicos)
+
+x -lt y Verdad si x menor que y\
+x -le y Verdad si x menor o igual que y\
+x -eq y Verdad si x igual que y\
+x -ge y Verdad si x mayor o igual que y\
+x -gt y Verdad si x mayor que y\
+x -ne y Verdad si x no igual que y
 
 ## EJERCICIO 1
  1) Cambie el passwd de su cuenta.

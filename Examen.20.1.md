@@ -126,18 +126,35 @@ lucia.zamudio@polifemo:~$ rm -r ~/*0
 
 ```
 ## EJERCICIO 18
- 18) (1,5 puntos) Se debe crear un guión en el directorio guiones llamado g1, que tome dos parámetros y realice lo siguiente:
- • Solicitará que se introduzca un nombre por teclado, y lo almacenará en una variable llamada DIR
- • Dentro del directorio, cuya ruta se pasa como primer parámetro, creará un directorio con el nombre contenido en la variable DIR.
+ 18) (1,5 puntos) Se debe crear un guión en el directorio guiones llamado g1, que tome dos parámetros y realice lo siguiente:\
+ • Solicitará que se introduzca un nombre por teclado, y lo almacenará en una variable llamada DIR\
+ • Dentro del directorio, cuya ruta se pasa como primer parámetro, creará un directorio con el nombre contenido en la variable DIR.\
  • Creará un alias llamado minombre, que creará un fichero con el nombre del segundo parámetro, dentro de DIR que contendrá su nombre real.
 ```bash
+#!/bin/bash
+if [ $# -ne 2 ];then
+        echo "Se deben introducir dos parámetros"
+        exit 10
+fi
 
+echo "Introduce un nombre por teclado: "
+read DIR
+
+
+mkdir $1/$DIR
+alias minombre="echo $USER > $1/$DIR/$2"
+export minombre
 ```
 ## EJERCICIO 19
  19) (0.5 puntos) Ejecute el guión anterior, de forma que el alias y la variable estén disponibles al finalizar el guión, pasándole los parámetros $HOME/pruebaL1/ficheros y estudiante.txt. 
 Ejecute el alias minombre tras ejecutar el guión
 ```bash
-
+lucia.zamudio@polifemo:~$ source ExS2/guiones/g1 /home/lucia.zamudio/ExS2/fi
+cheros/ estudiante.txt
+Introduce un nombre por teclado:
+pet
+lucia.zamudio@polifemo:~$ alias minombre
+alias minombre='echo lucia.zamudio > /home/lucia.zamudio/ExS2/ficheros//pet/estudiante.txt'
 ```
 ## EJERCICIO  20
 20) (3 puntos) Cree un guión en el directorio guiones llamado g2 que realice lo siguiente:

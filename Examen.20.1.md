@@ -135,16 +135,15 @@ Ejecute el alias minombre tras ejecutar el guión
 ```
 ## EJERCICIO  20
 20) (3 puntos) Cree un guión en el directorio guiones llamado g2 que realice lo siguiente:
- • Comprobará que se le han pasado dos parámetros, de no ser así, lo indicará con un mensaje de error y finalizará.
- • Si el primer parámetro no es un directorio válido, dará un mensaje de error y finalizará.
- • Inicializa una variable llamada TOTAL a 0
- • Por cada fichero que exista en el directorio que se pasa como primer parámetro, se comprobará que si su nombre:
- ◦ contiene la cadena que se pasa como segundo parámetro, se muestra su contenido.
- ◦ está compuesto de una f seguida de dos caracteres se suma uno a la variable
- TOTAL
- ◦ finaliza en número, se suma 1 a la variable TOTAL
- ◦ en cualquier otro caso, se resta 1 a la variable TOTAL
- • Visualiza un mensaje con el contenido de la variable TOTAL
+ • Comprobará que se le han pasado dos parámetros, de no ser así, lo indicará con un mensaje de error y finalizará.\
+ • Si el primer parámetro no es un directorio válido, dará un mensaje de error y finalizará.\
+ • Inicializa una variable llamada TOTAL a 0\
+ • Por cada fichero que exista en el directorio que se pasa como primer parámetro, se comprobará que si su nombre:\
+ ◦ contiene la cadena que se pasa como segundo parámetro, se muestra su contenido.\
+ ◦ está compuesto de una f seguida de dos caracteres se suma uno a la variable TOTAL
+ ◦ finaliza en número, se suma 1 a la variable TOTAL\
+ ◦ en cualquier otro caso, se resta 1 a la variable TOTAL\
+ • Visualiza un mensaje con el contenido de la variable TOTAL\
 ```bash
 
 ```

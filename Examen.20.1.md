@@ -90,12 +90,18 @@ lrwxrwxrwx 1 lucia.zamudio users 23 abr  1 11:36 ExS2/guiones/temporal/noacces -
 ## EJERCICIO 12
 12) 0,5 puntos. Visualice en orden inverso, todos los usuarios conectados al sistema cuyo nombre contenga la cadena va. La salida debe quedar en un fichero llamado p12.txt en el directorio ficheros.
 ```bash
-
+lucia.zamudio@polifemo:~$ who |grep va | sort -r >ExS2/ficheros/p12.txt
+lucia.zamudio@polifemo:~$ ls ExS2/ficheros/p12.txt
+ExS2/ficheros/p12.txt
+lucia.zamudio@polifemo:~$ cat ExS2/ficheros/p12.txt
+marta.huelva pts/24       2025-04-01 17:05 (150.214.167.251)
+marta.huelva pts/22       2025-04-01 17:05 (150.214.167.251)
+ivan.porta pts/23       2025-04-01 17:32 (150.214.167.251)
 ```
 ## EJERCICIO 13
 13) 0,5 puntos Con una sola orden, borre todos los ficheros que se encuentren a partir de su directorio de usuario y cuyo nombre finalice en 0 (cero).
 ```bash
-
+lucia.zamudio@polifemo:~$ rm -r ~/*0
 ```
 ## EJERCICIO 14
  14) 0,33 puntos Cree un fichero de texto (se puede hacer manualmente) llamado elgrub.txt, dentro del directorio ficheros, que contenga la linea del fichero de configuración de nuevos usuarios que indica el shell a usar por defecto cuando se crean nuevos usuarios

@@ -12,7 +12,7 @@ passwd
  comando, usando rutas relativas:
  ![Captura de pantalla 2025-04-01 202240](https://github.com/user-attachments/assets/1fdca903-18c2-4bc6-8360-bef6f26a7beb)
  ```bash
-
+mkdir -p ExS3/guion/temp  ExS3/varios/basura
 ```
 
 ## EJERCICIO 3
@@ -22,7 +22,8 @@ passwd
  Quite los permisos de lectura y escritura para miembros del grupo y resto de usuarios
  sobre los directorios varios y  guion.
  ```bash
-
+chmod 711 ExS3
+chmod 711 ExS3/varios ExS3/guion
 ```
 
 ## EJERCICIO 4
@@ -30,7 +31,7 @@ passwd
  cuyo nombre contenga un numero en la tercera posición de su nombre al directorio
  varios usando rutas absolutas
  ```bash
-
+cp /home/so/ficheros/??[0-9]*  /home/lucia.zamudio/ExS3/varios
 ```
 
 ## EJERCICIO 5
@@ -38,12 +39,12 @@ passwd
  ficheros del directorio varios cuyo nombre finalice en bak al directorio basura con
  rutas relativas
 ```
-
+mv ExS3/varios/*.bak ExS3/varios/basura
 ```
 ## EJERCICIO 6
  6) 0,25 puntos Borre el directorio basura
 ```bash
-
+rm -r ExS3/varios/basura
 ```
 
 ## EJERCICIO 7

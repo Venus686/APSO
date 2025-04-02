@@ -20,7 +20,6 @@ Ej:sudo apt -get aptitude
 • flatpak -> Similar a snap, permite instalar aplicaciones en un entorno independiente.
 
 
-
 • /etc/passwd -> Archivo con información de las cuentas de usuario (nombre, UID, GID, etc.).
 • /etc/shadow -> Archivo con las contraseñas cifradas de los usuarios.
 • /etc/group -> Contiene los grupos del sistema y los usuarios que pertenecen a ellos.

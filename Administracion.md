@@ -13,39 +13,40 @@ EJEMPLO : sudo aptitude install plank
 • apt-get -> Actualiza, instala, elimina o limpia un paquete
 Ej:sudo apt -get aptitude
 
-• apt-cache -> 
-• add-apt-repository
-• tar
-• snap
-• flatpak
+• apt-cache -> muestra información sobre paquetes en el sistema
+• add-apt-repository -> Agrega repositorios de software en sistemas basados en APT.
+• tar -> Utilizado para comprimir y descomprimir archivos en formatos .tar, .tar.gz, etc.
+• snap -> Sistema de paquetes desarrollado por Canonical para instalar software de manera aislada.
+• flatpak -> Similar a snap, permite instalar aplicaciones en un entorno independiente.
 
 
 
-• /etc/passwd
-• /etc/shadow
-• /etc/group
-• /etc/adduser.conf
-• adduser
-• addgroup
-• usermod
-• deluser
-• delgroup
-• chsh
-• chage
-• ulimit
-• quotachek
-• quotaon
-• quotaoff
-• quota
-• edquota
-• repquota
+• /etc/passwd -> Archivo con información de las cuentas de usuario (nombre, UID, GID, etc.).
+• /etc/shadow -> Archivo con las contraseñas cifradas de los usuarios.
+• /etc/group -> Contiene los grupos del sistema y los usuarios que pertenecen a ellos.
+• /etc/adduser.conf ->   Archivo de configuración predeterminado para la creación de nuevos usuarios.
+• adduser -> Comando para agregar usuarios de manera más amigable que useradd.
+• addgroup -> Crea nuevos grupos en el sistema.
+• usermod ->  Modifica cuentas de usuario (cambia grupo, directorio home, etc.).
+• deluser ->  Elimina un usuario del sistema.
+• delgroup -> Elimina un grupo del sistema.
+• chsh -> Cambia el shell predeterminado de un usuario.
+• chage -> Gestiona la caducidad de contraseñas de los usuarios.
 
-• /etc/default/grub
-• update-grub2
-• dmesg
-• systemctl
-• journalctl
-• pstree
-• cron
-• at
-• shutdown
+• ulimit ->
+• quotachek ->
+• quotaon ->
+• quotaoff ->
+• quota ->
+• edquota ->
+• repquota ->
+
+• /etc/default/grub ->
+• update-grub2 ->
+• dmesg ->
+• systemctl ->
+• journalctl ->
+• pstree ->
+• cron ->
+• at ->
+• shutdown ->

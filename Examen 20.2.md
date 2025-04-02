@@ -51,7 +51,7 @@ rm -r ExS3/varios/basura
  7) 0,25 puntos s Haga que la ruta al directorio guion y al directorio actual (directorio .)
  estén siempre disponibles en el PATH al acceder al sistema.
  ```bash
-PATH=:.
+PATH=:.cle
 ```
 ## EJERCICIO 8
  8) 0,25  Haga que cada vez que se acceda al sistema se cree una variable llamada

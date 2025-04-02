@@ -134,7 +134,23 @@ PATH=:.
  Genera un fichero en la carpeta varios con el nombre introducido como parámetro en el
  que guardaremos el número leído tantas veces como indique ese número.
 ```bash
-
+#!/bin/bash
+if [ $# -n2 1 ];then
+    echo "Error. Se debe de pasar un solo parámetro."
+    exit 10
+fi
+echo "Introduce un número por teclado, entre 1 y 10."
+read NUMERO
+if [ $NUMERO -lt 1 ] | [ $NUMERO -gt 10 ];then
+   echo "Error el numero debe de ser entre 1 y 10"
+   exit 10
+fi
+i=0
+while [ $i -lt $NUMERO ]
+do
+   echo "$NUMERO" 1>/home/lucia.zamudio/ExS2/varios/$1
+   i=$(expr $i + 1)
+done 
 ```
 ## EJERCICIO 19
  19)  (0.25 puntos)  Ejecute el guión anterior pasando como parámetro fichp
@@ -152,7 +168,19 @@ PATH=:.
  ordenados alfabéticamente en orden inverso. Cada nombre de fichero debe encontrarse en
  una línea diferente. Es obligatorio el uso del for para la realización de este ejercicio.
 ```bash
+#!/bin/bash
+if [ $# -ne 2 ];then
+   echo "Error, se deben de poner dis parámetros."
+   exit 10
+fi
+if [ ! -d $1 ];then
+   echo "Error, el primer parámetro debería ser un fichero."
+   exit 10
+fi
 
-
+for i in $(find ~  -mtime -2h  printf"%h \n")
+do
+     sort -r $i 1>$1/$2
+ done
 ```
 

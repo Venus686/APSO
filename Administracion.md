@@ -87,9 +87,26 @@ dmesg | grep EXT4
 
 systemctl → Gestiona servicios y procesos en sistemas con systemd.
 systemctl list-units --type=service --state=active
+$ sudo systemctl start servicio
+$ sudo systemctl stop servicio
+$ sudo systemctl enable servicio
+$ sudo systemctl disable service
+$ sudo systemctl mask servicio
+$ sudo systemctl unmask servicio
 
 journalctl → Permite ver los logs del sistema en systemd.
+• journalctl -b nos muestra los mensajes del arranque
+• journalctl -f permite seguir los mensajes nuevos
+
 pstree → Muestra los procesos en ejecución en forma de árbol.
 cron → Servicio para programar tareas automáticas en horarios específicos.
 at → Programa la ejecución de comandos en un tiempo específico.
+at 00:32
+warning: commands will be executed using /bin/sh
+at> echo " linea generada por la orden at a las $(date)" >> /home/userapso/cadahora
+at> <EOT>
+at> CTRL-D (para finalizar)
+at -f programado now + 15 min
+
 shutdown → Apaga o reinicia el sistema.
+sudo shutdown -h +2 "salid y guardar que esto se va a apagar"

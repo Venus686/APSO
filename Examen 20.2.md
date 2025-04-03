@@ -136,7 +136,7 @@ PATH=:.cle
  que guardaremos el número leído tantas veces como indique ese número.
 ```bash
 #!/bin/bash
-if [ $# -n2 1 ];then
+if [ $# -ne 1 ];then
     echo "Error. Se debe de pasar un solo parámetro."
     exit 10
 fi
@@ -149,7 +149,7 @@ fi
 i=0
 while [ $i -lt $NUMERO ]
 do
-   echo "$NUMERO" 1>/home/lucia.zamudio/ExS2/varios/$1
+   echo "$NUMERO" >>/home/lucia.zamudio/ExS2/varios/$1
    i=$(expr $i + 1)
 done 
 ```
@@ -179,9 +179,9 @@ if [ ! -d $1 ];then
    exit 10
 fi
 
-for i in $(find ~  -mtime -2h  printf"%h \n")
+for i in $(find "$HOME" -type f -amin -120 | sort -r)
 do
-     sort -r $i 1>$1/$2
+     echo $i >>$1/$2
  done
 ```
 
